@@ -79,9 +79,9 @@
             </li>
         </comps>
         <statBases>
-            <MaxHitPoints>500</MaxHitPoints>
-            <WorkToBuild>1500</WorkToBuild>
-            <Mass>500</Mass>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Mass>100</Mass>
         </statBases>
         <size>(1,2)</size>
         <building>
@@ -117,9 +117,9 @@
             </li>
         </comps>
         <statBases>
-            <MaxHitPoints>1000</MaxHitPoints>
-            <WorkToBuild>2500</WorkToBuild>
-            <Mass>1000</Mass>
+            <MaxHitPoints>400</MaxHitPoints>
+            <WorkToBuild>4000</WorkToBuild>
+            <Mass>200</Mass>
         </statBases>
         <size>(2,2)</size>
         <building>
@@ -158,8 +158,8 @@
         </building>
         <statBases>
             <MaxHitPoints>150</MaxHitPoints>
-            <WorkToBuild>500</WorkToBuild>
-            <Mass>150</Mass>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>75</Mass>
         </statBases>
     </ThingDef>
 </Defs>

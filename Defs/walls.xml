@@ -46,7 +46,7 @@
         <thingClass>Building</thingClass>
         <category>Building</category>
         <statBases>
-            <MaxHitPoints>250</MaxHitPoints>
+            <MaxHitPoints>300</MaxHitPoints>
             <WorkToBuild>3000</WorkToBuild>
             <Flammability>0.25</Flammability>
         </statBases>
