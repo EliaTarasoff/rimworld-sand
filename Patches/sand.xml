@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <!--Sand-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/TerrainDef[defName="SoftSand"]/affordances</xpath>
+        <value>
+            <li>Sand</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/TerrainDef[defName="Sand"]/affordances/li[text()="Heavy"]</xpath>
+    </Operation>
+
+    <!--Soft Sand-->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/TerrainDef[defName="SoftSand"]/affordances</xpath>
+        <value>
+            <li>SoftSand</li>
+        </value>
+    </Operation>
+</Patch>

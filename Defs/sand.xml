@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <TerrainAffordanceDef>
+        <defName>Sand</defName>
+        <label>soft sand</label>
+        <order>4000</order>
+    </TerrainAffordanceDef>
+
+    <TerrainAffordanceDef>
+        <defName>SoftSand</defName>
+        <label>soft sand</label>
+        <order>4100</order>
+    </TerrainAffordanceDef>
+
+
+    <ResearchTabDef>
+		<defName>Sand</defName>
+		<label>Sand</label>
+	</ResearchTabDef>
+
+    <ResearchProjectDef>
+        <defName>ConcreteSandResearch</defName>
+        <label>concrete sand</label>
+        <description>Polymerize sand into a form of concrete, to lock the sand in place and keep it from dirtying other surfaces.</description>
+
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <TerrainDef>
+        <defName>ConcreteSand</defName>
+        <label>concrete sand</label>
+        <description>Polymerized sand-concrete. It locks the sand in place, to keep it from dirtying other surfaces, but is ugly, slow to produce, and can't support much weight.</description>
+
+        <texturePath>Terrain/Surfaces/Concrete</texturePath>
+        <color>(255, 240, 200)</color>
+        <edgeType>Hard</edgeType>
+        <renderPrecedence>200</renderPrecedence>
+
+        <terrainAffordanceNeeded>SoftSand</terrainAffordanceNeeded>
+        <affordances>
+            <li>Light</li>
+        </affordances>
+        <layerable>true</layerable>
+        <designationCategory>Floors</designationCategory>
+        <fertility>0</fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+        <statBases>
+            <Beauty>-2</Beauty>
+            <WorkToBuild>3000</WorkToBuild>
+        </statBases>
+        <researchPrerequisites>
+            <li>ConcreteSandResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+    <ResearchProjectDef>
+        <defName>BridgeSandResearch</defName>
+        <label>sand-bridge</label>
+        <description>Bridges designed to be built on top of sand.</description>
+
+        <baseCost>1000</baseCost>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>1.0</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <TerrainDef>
+        <defName>BridgeSand</defName>
+        <label>sand-bridge</label>
+        <description>A bridge design adapted for building on top of sand.</description>
+
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <color>(80, 80, 80)</color>
+        <edgeType>Hard</edgeType>
+        <renderPrecedence>200</renderPrecedence>
+
+        <terrainAffordanceNeeded>SoftSand</terrainAffordanceNeeded>
+        <affordances>
+            <li>Light</li>
+            <li>Medium</li>
+            <li>Heavy</li>
+        </affordances>
+        <layerable>true</layerable>
+        <designationCategory>Structure</designationCategory>
+        <fertility>0</fertility>
+        <constructEffect>ConstructMetal</constructEffect>
+        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+        <statBases>
+            <Beauty>-1</Beauty>
+            <WorkToBuild>5000</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>8</Steel>
+        </costList>
+        <researchPrerequisites>
+            <li>BridgeSandResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+</Defs>
