@@ -53,6 +53,7 @@
         <statBases>
             <Beauty>-2</Beauty>
             <WorkToBuild>3000</WorkToBuild>
+            <Flammability>0.1</Flammability>
         </statBases>
         <researchPrerequisites>
             <li>ConcreteSandResearch</li>
@@ -72,8 +73,8 @@
         </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>1.0</researchViewX>
-        <researchViewY>0</researchViewY>
+        <researchViewX>0</researchViewX>
+        <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
     <TerrainDef>
