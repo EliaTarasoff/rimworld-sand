@@ -62,7 +62,7 @@
         <renderPrecedence>200</renderPrecedence>
 
         <layerable>true</layerable>
-        <designationCategory>Structure</designationCategory>
+        <designationCategory>Floors</designationCategory>
         <fertility>0</fertility>
         <constructEffect>ConstructMetal</constructEffect>
         <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
