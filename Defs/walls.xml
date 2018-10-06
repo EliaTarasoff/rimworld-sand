@@ -3,7 +3,7 @@
     <ResearchProjectDef>
         <defName>ConcreteSandWallResearch</defName>
         <label>concrete sand wall</label>
-        <description>Pour concrete-sand into a rough wall.</description>
+        <description>Pour concrete sand into a rough wall.</description>
 
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
@@ -18,7 +18,7 @@
     <ThingDef Name="ConcreteSandWall" ParentName="BuildingBase">
         <defName>ConcreteSandWall</defName>
         <label>concrete sand wall</label>
-        <description>A wall made of concrete-sand.</description>
+        <description>A wall made of concrete sand.</description>
 
         <graphicData>
             <color>(127, 120, 100)</color>
@@ -45,7 +45,11 @@
 
         <thingClass>Building</thingClass>
         <category>Building</category>
+        <costList>
+            <ConcreteSandForm>2</ConcreteSandForm>
+        </costList>
         <statBases>
+            <Beauty>-1</Beauty>
             <MaxHitPoints>300</MaxHitPoints>
             <WorkToBuild>3000</WorkToBuild>
             <Flammability>0.25</Flammability>

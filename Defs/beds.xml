@@ -3,7 +3,7 @@
     <ResearchProjectDef>
         <defName>ConcreteSandBeddingResearch</defName>
         <label>concrete sand bedding</label>
-        <description>Pour concrete-sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+        <description>Pour concrete sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
 
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
@@ -55,8 +55,8 @@
 
     <ThingDef ParentName="ConcreteSandBedBase">
         <defName>ConcreteSandBed</defName>
-        <label>concrete-sand bed</label>
-        <description>A thin sheet and pillow, on a concrete-sand box. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+        <label>concrete sand bed</label>
+        <description>A thin sheet and pillow, on a concrete sand box. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
 
         <graphicData>
             <texPath>Things/Building/Furniture/Bed/Bed</texPath>
@@ -78,6 +78,9 @@
                 </linkableFacilities>
             </li>
         </comps>
+        <costList>
+            <ConcreteSandForm>3</ConcreteSandForm>
+        </costList>
         <statBases>
             <MaxHitPoints>200</MaxHitPoints>
             <WorkToBuild>2000</WorkToBuild>
@@ -93,8 +96,8 @@
 
     <ThingDef ParentName="ConcreteSandBedBase">
         <defName>ConcreteSandDoubleBed</defName>
-        <label>concrete-sand double bed</label>
-        <description>A thin sheet and pillows, on a concrete-sand box, for two people. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+        <label>concrete sand double bed</label>
+        <description>A thin sheet and pillows, on a concrete sand box, for two people. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
 
         <graphicData>
             <texPath>Things/Building/Furniture/Bed/DoubleBed</texPath>
@@ -116,6 +119,9 @@
                 </linkableFacilities>
             </li>
         </comps>
+        <costList>
+            <ConcreteSandForm>6</ConcreteSandForm>
+        </costList>
         <statBases>
             <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>4000</WorkToBuild>
@@ -131,8 +137,8 @@
 
     <ThingDef ParentName="ConcreteSandBedBase">
         <defName>ConcreteSandAnimalSleepingBox</defName>
-        <label>concrete-sand animal sleeping box</label>
-        <description>A small concrete-sand box for small animals to sleep in.</description>
+        <label>concrete sand animal sleeping box</label>
+        <description>A small concrete sand box for small animals to sleep in.</description>
 
         <uiIconScale>0.75</uiIconScale>
         <rotatable>false</rotatable>
@@ -156,6 +162,9 @@
             <bed_maxBodySize>0.55</bed_maxBodySize>
             <bed_showSleeperBody>true</bed_showSleeperBody>
         </building>
+        <costList>
+            <ConcreteSandForm>1</ConcreteSandForm>
+        </costList>
         <statBases>
             <MaxHitPoints>150</MaxHitPoints>
             <WorkToBuild>1500</WorkToBuild>

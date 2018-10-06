@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--Sand-Concrete-->
+    <!--Concrete Sand-->
     <TerrainAffordanceDef>
         <defName>AffordanceConcreteSand</defName>
-        <label>soft sand</label>
+        <label>diggable sand</label>
         <order>4000</order>
     </TerrainAffordanceDef>
 
@@ -43,6 +43,9 @@
         <fertility>0</fertility>
         <constructEffect>ConstructDirt</constructEffect>
         <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+        <costList>
+            <ConcreteSandForm>1</ConcreteSandForm>
+        </costList>
         <statBases>
             <Beauty>-2</Beauty>
             <WorkToBuild>2000</WorkToBuild>
@@ -92,7 +95,7 @@
 
     <TerrainDef ParentName="SandSupportTileBase">
         <defName>SandSupportTile</defName>
-        <label>sand-support tile</label>
+        <label>sand support tile</label>
         <description>Special tiles placed on top of sand, to support heavier structures.</description>
 
         <color>(80, 80, 80)</color>
@@ -118,7 +121,7 @@
 
     <ResearchProjectDef>
         <defName>SoftSandSupportTilesResearch</defName>
-        <label>soft-sand-support tiles</label>
+        <label>soft sand support tiles</label>
         <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
 
         <baseCost>1500</baseCost>
@@ -133,13 +136,13 @@
 
     <TerrainAffordanceDef>
         <defName>AffordanceSoftSandSupportTile</defName>
-        <label>sand</label>
+        <label>soft sand</label>
         <order>4100</order>
     </TerrainAffordanceDef>
 
     <TerrainDef ParentName="SandSupportTileBase">
         <defName>SoftSandSupportTile</defName>
-        <label>soft-sand-support tile</label>
+        <label>soft sand support tile</label>
         <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
 
         <color>(140, 140, 140)</color>
