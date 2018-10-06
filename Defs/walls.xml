@@ -15,7 +15,7 @@
         <researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
-    <ThingDef ParentName="BuildingBase" Name="ConcreteSandWall">
+    <ThingDef Name="ConcreteSandWall" ParentName="BuildingBase">
         <defName>ConcreteSandWall</defName>
         <label>concrete sand wall</label>
         <description>A wall made of concrete-sand.</description>

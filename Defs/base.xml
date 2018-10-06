@@ -80,7 +80,7 @@
         </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>0</researchViewX>
+        <researchViewX>1</researchViewX>
         <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
@@ -127,7 +127,7 @@
         </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>1</researchViewX>
+        <researchViewX>2</researchViewX>
         <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
