@@ -32,7 +32,6 @@
         <passability>PassThroughOnly</passability>
         <statBases>
             <Flammability>0.25</Flammability>
-            <Beauty>-1</Beauty>
             <BedRestEffectiveness>0.9</BedRestEffectiveness>
             <Comfort>0.5</Comfort>
             <ImmunityGainSpeedFactor>1.035</ImmunityGainSpeedFactor>
@@ -82,6 +81,7 @@
             <ConcreteSandForm>3</ConcreteSandForm>
         </costList>
         <statBases>
+            <Beauty>-5</Beauty>
             <MaxHitPoints>200</MaxHitPoints>
             <WorkToBuild>2000</WorkToBuild>
             <Mass>100</Mass>
@@ -123,6 +123,7 @@
             <ConcreteSandForm>6</ConcreteSandForm>
         </costList>
         <statBases>
+            <Beauty>-10</Beauty>
             <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>4000</WorkToBuild>
             <Mass>200</Mass>
@@ -166,6 +167,7 @@
             <ConcreteSandForm>1</ConcreteSandForm>
         </costList>
         <statBases>
+            <Beauty>-3</Beauty>
             <MaxHitPoints>150</MaxHitPoints>
             <WorkToBuild>1500</WorkToBuild>
             <Mass>75</Mass>
