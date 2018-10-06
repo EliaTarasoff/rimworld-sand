@@ -45,7 +45,7 @@
         <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
         <statBases>
             <Beauty>-2</Beauty>
-            <WorkToBuild>3000</WorkToBuild>
+            <WorkToBuild>2000</WorkToBuild>
             <Flammability>0.1</Flammability>
         </statBases>
         <researchPrerequisites>
@@ -54,17 +54,25 @@
     </TerrainDef>
 
 
+
     <!--Sand Support Tiles-->
-    <TerrainAffordanceDef>
-        <defName>AffordanceSandSupportTile</defName>
-        <label>sand</label>
-        <order>4100</order>
-    </TerrainAffordanceDef>
+    <TerrainDef Name="SandSupportTileBase" Abstract="True">
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <edgeType>Hard</edgeType>
+        <renderPrecedence>200</renderPrecedence>
+
+        <layerable>true</layerable>
+        <designationCategory>Structure</designationCategory>
+        <fertility>0</fertility>
+        <constructEffect>ConstructMetal</constructEffect>
+        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+    </TerrainDef>
+
 
     <ResearchProjectDef>
         <defName>SandSupportTilesResearch</defName>
         <label>sand support tiles</label>
-        <description>Special tiles placed on top of sand, to support heavy structures.</description>
+        <description>Special tiles placed on top of sand, to support heavier structures.</description>
 
         <baseCost>1000</baseCost>
         <prerequisites>
@@ -76,15 +84,18 @@
         <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
-    <TerrainDef>
-        <defName>SandSupportTile</defName>
-        <label>sand-bridge</label>
-        <description>A bridge design adapted for building on top of sand.</description>
+    <TerrainAffordanceDef>
+        <defName>AffordanceSandSupportTile</defName>
+        <label>sand</label>
+        <order>4100</order>
+    </TerrainAffordanceDef>
 
-        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>SandSupportTile</defName>
+        <label>sand-support tile</label>
+        <description>Special tiles placed on top of sand, to support heavier structures.</description>
+
         <color>(80, 80, 80)</color>
-        <edgeType>Hard</edgeType>
-        <renderPrecedence>200</renderPrecedence>
 
         <terrainAffordanceNeeded>AffordanceSandSupportTile</terrainAffordanceNeeded>
         <affordances>
@@ -92,20 +103,61 @@
             <li>Medium</li>
             <li>Heavy</li>
         </affordances>
-        <layerable>true</layerable>
-        <designationCategory>Structure</designationCategory>
-        <fertility>0</fertility>
-        <constructEffect>ConstructMetal</constructEffect>
-        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
         <statBases>
             <Beauty>-1</Beauty>
-            <WorkToBuild>5000</WorkToBuild>
+            <WorkToBuild>1000</WorkToBuild>
         </statBases>
         <costList>
             <Steel>8</Steel>
         </costList>
         <researchPrerequisites>
             <li>SandSupportTilesResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+    <ResearchProjectDef>
+        <defName>SoftSandSupportTilesResearch</defName>
+        <label>soft-sand-support tiles</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+
+        <baseCost>1500</baseCost>
+        <prerequisites>
+            <li>SandSupportTilesResearch</li>
+        </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>1</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <TerrainAffordanceDef>
+        <defName>AffordanceSoftSandSupportTile</defName>
+        <label>sand</label>
+        <order>4100</order>
+    </TerrainAffordanceDef>
+
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>SoftSandSupportTile</defName>
+        <label>soft-sand-support tile</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+
+        <color>(140, 140, 140)</color>
+
+        <terrainAffordanceNeeded>AffordanceSoftSandSupportTile</terrainAffordanceNeeded>
+        <affordances>
+            <li>Light</li>
+            <li>Medium</li>
+        </affordances>
+        <statBases>
+            <Beauty>-1</Beauty>
+            <WorkToBuild>1500</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>12</Steel>
+        </costList>
+        <researchPrerequisites>
+            <li>SoftSandSupportTilesResearch</li>
         </researchPrerequisites>
     </TerrainDef>
 </Defs>

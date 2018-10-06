@@ -25,6 +25,7 @@
         <altitudeLayer>Building</altitudeLayer>
 
         <thingClass>Building_Bed</thingClass>
+        <designationCategory>Furniture</designationCategory>
         <scatterableOnMapGen>false</scatterableOnMapGen>
         <canOverlapZones>false</canOverlapZones>
         <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>

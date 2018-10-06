@@ -21,6 +21,7 @@
         <description>A wall made of concrete-sand.</description>
 
         <graphicData>
+            <color>(127, 120, 100)</color>
             <texPath>Things/Building/Linked/Wall</texPath>
             <graphicClass>Graphic_Appearances</graphicClass>
             <linkType>CornerFiller</linkType>
@@ -40,12 +41,13 @@
             </damageData>
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+        <uiIconColor>(127, 120, 100)</uiIconColor>
 
         <thingClass>Building</thingClass>
         <category>Building</category>
         <statBases>
             <MaxHitPoints>250</MaxHitPoints>
-            <WorkToBuild>300</WorkToBuild>
+            <WorkToBuild>3000</WorkToBuild>
             <Flammability>0.25</Flammability>
         </statBases>
         <altitudeLayer>Building</altitudeLayer>
