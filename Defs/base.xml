@@ -78,12 +78,9 @@
         <description>Special tiles placed on top of sand, to support heavier structures.</description>
 
         <baseCost>1000</baseCost>
-        <prerequisites>
-            <li>ConcreteSandResearch</li>
-        </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>1</researchViewX>
+        <researchViewX>0</researchViewX>
         <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
@@ -130,7 +127,7 @@
         </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>2</researchViewX>
+        <researchViewX>1</researchViewX>
         <researchViewY>2</researchViewY>
     </ResearchProjectDef>
 
