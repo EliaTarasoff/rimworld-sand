@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>ConcreteSandBeddingResearch</defName>
+        <label>concrete sand bedding</label>
+        <description>Pour concrete-sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchPrerequisite>ConcreteSandResearch</researchPrerequisite>
+        <researchViewX>1</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <ThingDef Name="ConcreteSandBedBase" ParentName="BuildingBase" Abstract="True">
+        <uiIconScale>0.90</uiIconScale>
+        <drawGUIOverlay>True</drawGUIOverlay>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <altitudeLayer>Building</altitudeLayer>
+
+        <thingClass>Building_Bed</thingClass>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <canOverlapZones>false</canOverlapZones>
+        <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
+        <passability>PassThroughOnly</passability>
+        <statBases>
+            <Flammability>0.25</Flammability>
+            <Beauty>-1</Beauty>
+            <BedRestEffectiveness>0.9</BedRestEffectiveness>
+            <Comfort>0.5</Comfort>
+            <ImmunityGainSpeedFactor>1.035</ImmunityGainSpeedFactor>
+            <SurgerySuccessChanceFactor>0.85</SurgerySuccessChanceFactor>
+        </statBases>
+        <building>
+            <bed_healPerDay>3</bed_healPerDay>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+        </building>
+        <comps>
+            <li Class="CompProperties_RoomIdentifier">
+                <roomStat>Impressiveness</roomStat>
+            </li>
+        </comps>
+        <techLevel>Industrial</techLevel>
+        <researchPrerequisites>
+            <li>ConcreteSandBeddingResearch</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="ConcreteSandBedBase">
+        <defName>ConcreteSandBed</defName>
+        <label>concrete-sand bed</label>
+        <description>A thin sheet and pillow, on a concrete-sand box. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rect>(0,0.05,1,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>500</Mass>
+        </statBases>
+        <size>(1,2)</size>
+        <building>
+            <bed_showSleeperBody>False</bed_showSleeperBody>
+        </building>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>60</pathCost>
+    </ThingDef>
+
+    <ThingDef ParentName="ConcreteSandBedBase">
+        <defName>ConcreteSandDoubleBed</defName>
+        <label>concrete-sand double bed</label>
+        <description>A thin sheet and pillows, on a concrete-sand box, for two people. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/DoubleBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.05,2.05)</drawSize>
+            <damageData>
+                <rect>(0,0.05,2,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <WorkToBuild>2500</WorkToBuild>
+            <Mass>1000</Mass>
+        </statBases>
+        <size>(2,2)</size>
+        <building>
+            <bed_showSleeperBody>False</bed_showSleeperBody>
+        </building>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>60</pathCost>
+    </ThingDef>
+
+    <ThingDef ParentName="ConcreteSandBedBase">
+        <defName>ConcreteSandAnimalSleepingBox</defName>
+        <label>concrete-sand animal sleeping box</label>
+        <description>A small concrete-sand box for small animals to sleep in.</description>
+
+        <uiIconScale>0.75</uiIconScale>
+        <rotatable>false</rotatable>
+        <graphicData>
+            <texPath>Things/Building/Misc/AnimalBed/AnimalSleepBox</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <damageData>
+                <rect>(0.05,0.05,0.9,0.9)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+
+        <fillPercent>0.15</fillPercent>
+        <pathCost>40</pathCost>
+        <building>
+            <bed_humanlike>false</bed_humanlike>
+            <bed_maxBodySize>0.55</bed_maxBodySize>
+            <bed_showSleeperBody>true</bed_showSleeperBody>
+        </building>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>500</WorkToBuild>
+            <Mass>150</Mass>
+        </statBases>
+    </ThingDef>
+</Defs>

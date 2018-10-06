@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--Sand-Concrete-->
     <TerrainAffordanceDef>
         <defName>Sand</defName>
         <label>soft sand</label>
@@ -33,14 +34,14 @@
     <TerrainDef>
         <defName>ConcreteSand</defName>
         <label>concrete sand</label>
-        <description>Polymerized sand-concrete. It locks the sand in place, to keep it from dirtying other surfaces, but is ugly, slow to produce, and can't support much weight.</description>
+        <description>Polymerized concrete made from sand. It locks the sand in place, to keep it from dirtying other surfaces, but is ugly, slow to produce, and can't support much weight.</description>
 
         <texturePath>Terrain/Surfaces/Concrete</texturePath>
         <color>(255, 240, 200)</color>
         <edgeType>Hard</edgeType>
         <renderPrecedence>200</renderPrecedence>
 
-        <terrainAffordanceNeeded>SoftSand</terrainAffordanceNeeded>
+        <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <affordances>
             <li>Light</li>
         </affordances>
@@ -59,10 +60,11 @@
     </TerrainDef>
 
 
+    <!--Sand Support Tiles-->
     <ResearchProjectDef>
-        <defName>BridgeSandResearch</defName>
-        <label>sand-bridge</label>
-        <description>Bridges designed to be built on top of sand.</description>
+        <defName>SandSupportTilesResearch</defName>
+        <label>sand support tiles</label>
+        <description>Special tiles placed on top of sand, to support heavy structures.</description>
 
         <baseCost>1000</baseCost>
         <prerequisites>
@@ -75,7 +77,7 @@
     </ResearchProjectDef>
 
     <TerrainDef>
-        <defName>BridgeSand</defName>
+        <defName>SandSupportTile</defName>
         <label>sand-bridge</label>
         <description>A bridge design adapted for building on top of sand.</description>
 
@@ -84,7 +86,7 @@
         <edgeType>Hard</edgeType>
         <renderPrecedence>200</renderPrecedence>
 
-        <terrainAffordanceNeeded>SoftSand</terrainAffordanceNeeded>
+        <terrainAffordanceNeeded>AffordanceSandSupportTile</terrainAffordanceNeeded>
         <affordances>
             <li>Light</li>
             <li>Medium</li>
@@ -103,7 +105,7 @@
             <Steel>8</Steel>
         </costList>
         <researchPrerequisites>
-            <li>BridgeSandResearch</li>
+            <li>SandSupportTilesResearch</li>
         </researchPrerequisites>
     </TerrainDef>
 </Defs>
