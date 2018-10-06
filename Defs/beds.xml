@@ -8,12 +8,17 @@
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchPrerequisite>ConcreteSandResearch</researchPrerequisite>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
         <researchViewX>1</researchViewX>
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
     <ThingDef Name="ConcreteSandBedBase" ParentName="BuildingBase" Abstract="True">
+        <graphicData>
+            <color>(255, 240, 200)</color>
+        </graphicData>
         <uiIconScale>0.90</uiIconScale>
         <drawGUIOverlay>True</drawGUIOverlay>
         <defaultPlacingRot>South</defaultPlacingRot>

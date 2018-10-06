@@ -8,7 +8,9 @@
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchPrerequisite>ConcreteSandResearch</researchPrerequisite>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
         <researchViewX>1</researchViewX>
         <researchViewY>1</researchViewY>
     </ResearchProjectDef>
@@ -76,5 +78,8 @@
                 <multiplier>2</multiplier>
             </li>
         </damageMultipliers>
+        <researchPrerequisites>
+            <li>ConcreteSandWallResearch</li>
+        </researchPrerequisites>
     </ThingDef>
 </Defs>

@@ -2,17 +2,10 @@
 <Defs>
     <!--Sand-Concrete-->
     <TerrainAffordanceDef>
-        <defName>Sand</defName>
+        <defName>AffordanceConcreteSand</defName>
         <label>soft sand</label>
         <order>4000</order>
     </TerrainAffordanceDef>
-
-    <TerrainAffordanceDef>
-        <defName>SoftSand</defName>
-        <label>soft sand</label>
-        <order>4100</order>
-    </TerrainAffordanceDef>
-
 
     <ResearchTabDef>
 		<defName>Sand</defName>
@@ -62,6 +55,12 @@
 
 
     <!--Sand Support Tiles-->
+    <TerrainAffordanceDef>
+        <defName>AffordanceSandSupportTile</defName>
+        <label>sand</label>
+        <order>4100</order>
+    </TerrainAffordanceDef>
+
     <ResearchProjectDef>
         <defName>SandSupportTilesResearch</defName>
         <label>sand support tiles</label>
