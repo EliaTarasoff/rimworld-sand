@@ -28,6 +28,7 @@
         <designationCategory>Furniture</designationCategory>
         <scatterableOnMapGen>false</scatterableOnMapGen>
         <canOverlapZones>false</canOverlapZones>
+        <coversFloor>true</coversFloor>
         <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <passability>PassThroughOnly</passability>
         <statBases>
@@ -134,43 +135,5 @@
         </building>
         <fillPercent>0.4</fillPercent>
         <pathCost>60</pathCost>
-    </ThingDef>
-
-    <ThingDef ParentName="ConcreteSandBedBase">
-        <defName>ConcreteSandAnimalSleepingBox</defName>
-        <label>concrete sand animal sleeping box</label>
-        <description>A small concrete sand box for small animals to sleep in.</description>
-
-        <uiIconScale>0.75</uiIconScale>
-        <rotatable>false</rotatable>
-        <graphicData>
-            <texPath>Things/Building/Misc/AnimalBed/AnimalSleepBox</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <damageData>
-                <rect>(0.05,0.05,0.9,0.9)</rect>
-                <cornerTL>Damage/Corner</cornerTL>
-                <cornerTR>Damage/Corner</cornerTR>
-                <cornerBL>Damage/Corner</cornerBL>
-                <cornerBR>Damage/Corner</cornerBR>
-            </damageData>
-        </graphicData>
-        <castEdgeShadows>true</castEdgeShadows>
-
-        <fillPercent>0.15</fillPercent>
-        <pathCost>40</pathCost>
-        <building>
-            <bed_humanlike>false</bed_humanlike>
-            <bed_maxBodySize>0.55</bed_maxBodySize>
-            <bed_showSleeperBody>true</bed_showSleeperBody>
-        </building>
-        <costList>
-            <ConcreteSandForm>1</ConcreteSandForm>
-        </costList>
-        <statBases>
-            <Beauty>-3</Beauty>
-            <MaxHitPoints>150</MaxHitPoints>
-            <WorkToBuild>1500</WorkToBuild>
-            <Mass>75</Mass>
-        </statBases>
     </ThingDef>
 </Defs>
