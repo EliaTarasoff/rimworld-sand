@@ -6,22 +6,37 @@
     </ResearchTabDef>
 
 
+
     <ResearchProjectDef>
         <defName>SandSupportTilesResearch</defName>
         <label>sand support tiles</label>
         <description>Special tiles placed on top of sand, to support heavier structures.</description>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
 
         <baseCost>1000</baseCost>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>0</researchViewX>
-        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SurfacedSandSupportTilesResearch</defName>
+        <label>sand support tiles (material-surfaced)</label>
+        <description>Special tiles placed on top of sand, to support heavier structures. These ones are surfaced with an additional material, for decorative or functional purposes.</description>
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
         <defName>SoftSandSupportTilesResearch</defName>
         <label>soft sand support tiles</label>
         <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+        <researchViewX>2</researchViewX>
+        <researchViewY>0</researchViewY>
 
         <baseCost>1500</baseCost>
         <prerequisites>
@@ -29,55 +44,16 @@
         </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <researchViewX>1</researchViewX>
-        <researchViewY>2</researchViewY>
     </ResearchProjectDef>
+
 
 
     <ResearchProjectDef>
         <defName>ConcreteSandResearch</defName>
         <label>concreted sand</label>
         <description>Polymerize sand into a form of concrete, to lock the sand in place and keep it from dirtying other surfaces.</description>
-
-        <baseCost>800</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
         <researchViewX>0</researchViewX>
-        <researchViewY>0</researchViewY>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>SoftConcreteSandResearch</defName>
-        <label>concreted soft sand</label>
-        <description>Building with soft sand requires even more skill and knowledge than coarse sand, but can be used to produce more pleasant-looking items.</description>
-
-        <baseCost>2000</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
-        <researchViewX>0</researchViewX>
-        <researchViewY>0</researchViewY>
-    </ResearchProjectDef>
-
-
-    <ResearchProjectDef>
-        <defName>ConcreteSandWallResearch</defName>
-        <label>concrete sand wall</label>
-        <description>Pour concrete sand into a rough wall.</description>
-
-        <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
-        <prerequisites>
-            <li>ConcreteSandResearch</li>
-        </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>1</researchViewY>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>SoftConcreteSandWallResearch</defName>
-        <label>soft concrete sand wall</label>
-        <description>Concretify soft sand into a smoother, better looking wall.</description>
+        <researchViewY>2</researchViewY>
 
         <baseCost>1000</baseCost>
         <techLevel>Industrial</techLevel>
@@ -85,15 +61,28 @@
         <prerequisites>
             <li>ConcreteSandResearch</li>
         </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SoftConcreteSandResearch</defName>
+        <label>concreted soft sand</label>
+        <description>Building with soft sand requires even more skill and knowledge than coarse sand, but can be used to produce more pleasant-looking items.</description>
+        <researchViewX>2</researchViewX>
+        <researchViewY>2</researchViewY>
+
+        <baseCost>2000</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
     </ResearchProjectDef>
 
 
+
     <ResearchProjectDef>
-        <defName>ConcreteSandBeddingResearch</defName>
-        <label>concrete sand bedding</label>
-        <description>Pour concrete sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+        <defName>ConcreteSandWallResearch</defName>
+        <label>concrete sand wall</label>
+        <description>Pour concrete sand into a rough wall.</description>
+        <researchViewX>1</researchViewX>
+        <researchViewY>3</researchViewY>
 
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
@@ -101,14 +90,16 @@
         <prerequisites>
             <li>ConcreteSandResearch</li>
         </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>0</researchViewY>
     </ResearchProjectDef>
+
+
 
     <ResearchProjectDef>
         <defName>ConcreteSandBeddingResearch</defName>
         <label>concrete sand bedding</label>
         <description>Pour concrete sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+        <researchViewX>1</researchViewX>
+        <researchViewY>4</researchViewY>
 
         <baseCost>500</baseCost>
         <techLevel>Industrial</techLevel>
@@ -116,7 +107,19 @@
         <prerequisites>
             <li>ConcreteSandResearch</li>
         </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+
+
+    <ResearchProjectDef>
+        <defName>ConcreteSandArtResearch</defName>
+        <label>concrete sand art</label>
+        <description>Concrete made from soft sand can be used to produce pleasant-looking art installations. While not as pleasing as other materials, it might be all that's available in harsh environments.</description>
+        <researchViewX>3</researchViewX>
+        <researchViewY>3</researchViewY>
+
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
     </ResearchProjectDef>
 </Defs>
