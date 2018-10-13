@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ResearchProjectDef>
-        <defName>ConcreteSandWallResearch</defName>
-        <label>concrete sand wall</label>
-        <description>Pour concrete sand into a rough wall.</description>
-
-        <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
-        <prerequisites>
-            <li>ConcreteSandResearch</li>
-        </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>1</researchViewY>
-    </ResearchProjectDef>
-
     <ThingDef Name="ConcreteSandWall" ParentName="BuildingBase">
         <defName>ConcreteSandWall</defName>
         <label>concrete sand wall</label>
@@ -50,8 +35,8 @@
         </costList>
         <statBases>
             <Beauty>-1</Beauty>
-            <MaxHitPoints>300</MaxHitPoints>
-            <WorkToBuild>3000</WorkToBuild>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
             <Flammability>0.25</Flammability>
         </statBases>
         <altitudeLayer>Building</altitudeLayer>

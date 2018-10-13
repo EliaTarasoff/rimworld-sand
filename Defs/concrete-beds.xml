@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ResearchProjectDef>
-        <defName>ConcreteSandBeddingResearch</defName>
-        <label>concrete sand bedding</label>
-        <description>Pour concrete sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
-
-        <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
-        <prerequisites>
-            <li>ConcreteSandResearch</li>
-        </prerequisites>
-        <researchViewX>1</researchViewX>
-        <researchViewY>0</researchViewY>
-    </ResearchProjectDef>
-
     <ThingDef Name="ConcreteSandBedBase" ParentName="BuildingBase" Abstract="True">
         <graphicData>
             <color>(255, 240, 200)</color>
@@ -41,10 +26,19 @@
         <building>
             <bed_healPerDay>3</bed_healPerDay>
             <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <bed_showSleeperBody>False</bed_showSleeperBody>
         </building>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>60</pathCost>
         <comps>
             <li Class="CompProperties_RoomIdentifier">
                 <roomStat>Impressiveness</roomStat>
+            </li>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                </linkableFacilities>
             </li>
         </comps>
         <techLevel>Industrial</techLevel>
@@ -70,29 +64,16 @@
         <staticSunShadowHeight>0.17</staticSunShadowHeight>
         <castEdgeShadows>True</castEdgeShadows>
 
-        <comps>
-            <li Class="CompProperties_AffectedByFacilities">
-                <linkableFacilities>
-                    <li>EndTable</li>
-                    <li>Dresser</li>
-                </linkableFacilities>
-            </li>
-        </comps>
         <costList>
             <ConcreteSandForm>3</ConcreteSandForm>
         </costList>
         <statBases>
             <Beauty>-5</Beauty>
             <MaxHitPoints>200</MaxHitPoints>
-            <WorkToBuild>2000</WorkToBuild>
+            <WorkToBuild>1000</WorkToBuild>
             <Mass>100</Mass>
         </statBases>
         <size>(1,2)</size>
-        <building>
-            <bed_showSleeperBody>False</bed_showSleeperBody>
-        </building>
-        <fillPercent>0.4</fillPercent>
-        <pathCost>60</pathCost>
     </ThingDef>
 
     <ThingDef ParentName="ConcreteSandBedBase">
@@ -112,28 +93,15 @@
         <staticSunShadowHeight>0.17</staticSunShadowHeight>
         <castEdgeShadows>True</castEdgeShadows>
 
-        <comps>
-            <li Class="CompProperties_AffectedByFacilities">
-                <linkableFacilities>
-                    <li>EndTable</li>
-                    <li>Dresser</li>
-                </linkableFacilities>
-            </li>
-        </comps>
         <costList>
             <ConcreteSandForm>6</ConcreteSandForm>
         </costList>
         <statBases>
             <Beauty>-10</Beauty>
             <MaxHitPoints>400</MaxHitPoints>
-            <WorkToBuild>4000</WorkToBuild>
+            <WorkToBuild>2000</WorkToBuild>
             <Mass>200</Mass>
         </statBases>
         <size>(2,2)</size>
-        <building>
-            <bed_showSleeperBody>False</bed_showSleeperBody>
-        </building>
-        <fillPercent>0.4</fillPercent>
-        <pathCost>60</pathCost>
     </ThingDef>
 </Defs>

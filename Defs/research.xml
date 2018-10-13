@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ResearchTabDef>
+        <defName>Sand</defName>
+        <label>Sand</label>
+    </ResearchTabDef>
+
+
+    <ResearchProjectDef>
+        <defName>SandSupportTilesResearch</defName>
+        <label>sand support tiles</label>
+        <description>Special tiles placed on top of sand, to support heavier structures.</description>
+
+        <baseCost>1000</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SoftSandSupportTilesResearch</defName>
+        <label>soft sand support tiles</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+
+        <baseCost>1500</baseCost>
+        <prerequisites>
+            <li>SandSupportTilesResearch</li>
+        </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>1</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+
+    <ResearchProjectDef>
+        <defName>ConcreteSandResearch</defName>
+        <label>concreted sand</label>
+        <description>Polymerize sand into a form of concrete, to lock the sand in place and keep it from dirtying other surfaces.</description>
+
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SoftConcreteSandResearch</defName>
+        <label>concreted soft sand</label>
+        <description>Building with soft sand requires even more skill and knowledge than coarse sand, but can be used to produce more pleasant-looking items.</description>
+
+        <baseCost>2000</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+
+    <ResearchProjectDef>
+        <defName>ConcreteSandWallResearch</defName>
+        <label>concrete sand wall</label>
+        <description>Pour concrete sand into a rough wall.</description>
+
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SoftConcreteSandWallResearch</defName>
+        <label>soft concrete sand wall</label>
+        <description>Concretify soft sand into a smoother, better looking wall.</description>
+
+        <baseCost>1000</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+
+    <ResearchProjectDef>
+        <defName>ConcreteSandBeddingResearch</defName>
+        <label>concrete sand bedding</label>
+        <description>Pour concrete sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
+        <researchViewX>1</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ConcreteSandBeddingResearch</defName>
+        <label>concrete sand bedding</label>
+        <description>Pour concrete sand into roughly-shaped beds. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
+
+        <baseCost>500</baseCost>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
+        <researchViewX>1</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+</Defs>

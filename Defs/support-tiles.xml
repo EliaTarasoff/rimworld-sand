@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <TerrainDef Name="SandSupportTileBase" Abstract="True">
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <edgeType>Hard</edgeType>
+        <renderPrecedence>200</renderPrecedence>
+
+        <layerable>true</layerable>
+        <designationCategory>Floors</designationCategory>
+        <fertility>0</fertility>
+        <constructEffect>ConstructMetal</constructEffect>
+        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+    </TerrainDef>
+
+
+    <TerrainAffordanceDef>
+        <defName>AffordanceSandSupportTile</defName>
+        <label>sand</label>
+        <order>4200</order>
+    </TerrainAffordanceDef>
+
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>SandSupportTile</defName>
+        <label>sand support tile</label>
+        <description>Special tiles placed on top of sand, to support heavier structures.</description>
+
+        <color>(80, 80, 80)</color>
+
+        <terrainAffordanceNeeded>AffordanceSandSupportTile</terrainAffordanceNeeded>
+        <affordances>
+            <li>Light</li>
+            <li>Medium</li>
+            <li>Heavy</li>
+        </affordances>
+        <statBases>
+            <Beauty>-1</Beauty>
+            <WorkToBuild>1000</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>8</Steel>
+        </costList>
+        <researchPrerequisites>
+            <li>SandSupportTilesResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+    <TerrainAffordanceDef>
+        <defName>AffordanceSoftSandSupportTile</defName>
+        <label>soft sand</label>
+        <order>4300</order>
+    </TerrainAffordanceDef>
+
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>SoftSandSupportTile</defName>
+        <label>soft sand support tile</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+
+        <color>(140, 140, 140)</color>
+
+        <terrainAffordanceNeeded>AffordanceSoftSandSupportTile</terrainAffordanceNeeded>
+        <affordances>
+            <li>Light</li>
+            <li>Medium</li>
+        </affordances>
+        <statBases>
+            <Beauty>-1</Beauty>
+            <WorkToBuild>1500</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>12</Steel>
+        </costList>
+        <researchPrerequisites>
+            <li>SoftSandSupportTilesResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+</Defs>

@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--
-    This item / process is needed, because buildings that take 0 resources give 0 experience.
-    I couldn't find any flags that looked related, so I'll make an item that's cheap (or free) to make
-    and used to make concrete sand.
-    -->
-
     <ThingDef Name="ConcreteSandForm" ParentName="ResourceBase">
         <defName>ConcreteSandForm</defName>
         <label>concrete sand form</label>
-        <description>Planks and rods, used to form concrete sand into shapes.</description>
+        <description>Various gas bladders and textile sheets, to hold concrete sand in place while it cures.</description>
 
         <graphicData>
             <graphicClass>Graphic_StackCount</graphicClass>
-            <texPath>Things/Item/Resource/Cloth</texPath>
-            <color>(90, 0, 130)</color>
+            <texPath>Things/Item/Resource/Leather</texPath>
+            <color>(60, 120, 60)</color>
         </graphicData>
         <uiIconForStackCount>1</uiIconForStackCount>
-        <soundInteract>Standard_Drop</soundInteract>
-        <soundDrop>Standard_Drop</soundDrop>
 
         <useHitPoints>false</useHitPoints>
         <thingCategories>
@@ -39,107 +31,36 @@
         <description>Create concrete sand forms.</description>
         <jobString>Creating concrete sand forms.</jobString>
 
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
-        <effectWorking>Smith</effectWorking>
-        <soundWorking>Recipe_Smith</soundWorking>
-        <!--<allowMixingIngredients>true</allowMixingIngredients>-->
-        <!--<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>-->
-        <!--<fixedIngredientFilter>-->
-            <!--<thingDefs>-->
-                <!--<li>Steel</li>-->
-            <!--</thingDefs>-->
-        <!--</fixedIngredientFilter>-->
-        <!--<defaultIngredientFilter>-->
-            <!--<thingDefs>-->
-                <!--<li>Steel</li>-->
-            <!--</thingDefs>-->
-        <!--</defaultIngredientFilter>-->
-        <!--<ingredients>-->
-            <!--<li>-->
-                <!--<filter>-->
-                    <!--<thingDefs>-->
-                        <!--<li>Steel</li>-->
-                    <!--</thingDefs>-->
-                <!--</filter>-->
-                <!--<count>1</count>-->
-            <!--</li>-->
-        <!--</ingredients>-->
+        <workSpeedStat>TailoringSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Tailor</effectWorking>
+        <soundWorking>Recipe_Tailor</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <targetCountAdjustment>50</targetCountAdjustment>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Textiles</li>
+                    </categories>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Textiles</li>
+            </categories>
+        </fixedIngredientFilter>
         <products>
             <ConcreteSandForm>25</ConcreteSandForm>
         </products>
         <workAmount>1000</workAmount>
+
+        <!-- I dislike putting the buildings on the recipe, but otherwise I'd need to make a patch anyways, so... -->
+        <recipeUsers>
+            <li>ElectricTailoringBench</li>
+            <li>HandTailoringBench</li>
+        </recipeUsers>
     </RecipeDef>
-
-    <ThingDef ParentName="BuildingBase">
-        <defName>ConcreteSandFormCraftingSpot</defName>
-        <label>concrete sand form crafting spot</label>
-        <description>A place to craft concrete sand forms.</description>
-
-        <graphicData>
-            <texPath>Things/Building/Production/CraftingSpot</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(1,1)</drawSize>
-        </graphicData>
-        <altitudeLayer>FloorEmplacement</altitudeLayer>
-        <size>(1,1)</size>
-
-        <thingClass>Building_WorkTable</thingClass>
-        <statBases>
-            <WorkToBuild>0</WorkToBuild>
-            <WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
-        </statBases>
-        <scatterableOnMapGen>false</scatterableOnMapGen>
-        <useHitPoints>false</useHitPoints>
-        <designationCategory>Production</designationCategory>
-        <passability>Standable</passability>
-        <hasInteractionCell>True</hasInteractionCell>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <surfaceType>Item</surfaceType>
-        <inspectorTabs>
-            <li>ITab_Bills</li>
-        </inspectorTabs>
-        <building>
-            <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
-            <workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
-            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-            <sowTag>SupportPlantsOnly</sowTag>
-            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
-            <ai_chillDestination>false</ai_chillDestination>
-        </building>
-        <comps>
-            <li Class="CompProperties_AffectedByFacilities">
-                <linkableFacilities>
-                    <li>ToolCabinet</li>
-                </linkableFacilities>
-            </li>
-            <li>
-                <compClass>CompReportWorkSpeed</compClass>
-            </li>
-        </comps>
-        <placeWorkers>
-            <li>PlaceWorker_ShowFacilitiesConnections</li>
-            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
-        </placeWorkers>
-        <recipes>
-            <li>MakeConcreteSandForm</li>
-        </recipes>
-    </ThingDef>
-
-    <WorkGiverDef>
-        <defName>DoBillsCraftConcreteSandForm</defName>
-        <label>craft concrete sand forms</label>
-        <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>BasicWorker</workType>
-        <priorityInType>95</priorityInType>
-        <fixedBillGiverDefs>
-            <li>ConcreteSandFormCraftingSpot</li>
-        </fixedBillGiverDefs>
-        <verb>craft</verb>
-        <gerund>crafting at</gerund>
-        <requiredCapacities>
-            <li>Manipulation</li>
-        </requiredCapacities>
-        <prioritizeSustains>true</prioritizeSustains>
-    </WorkGiverDef>
 </Defs>

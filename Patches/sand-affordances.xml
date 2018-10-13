@@ -16,7 +16,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/TerrainDef[defName="SoftSand"]/affordances</xpath>
         <value>
-            <li>AffordanceConcreteSand</li>
+            <li>AffordanceSoftConcreteSand</li>
             <li>AffordanceSoftSandSupportTile</li>
         </value>
     </Operation>
