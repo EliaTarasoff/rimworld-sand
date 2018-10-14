@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <TerrainDef Name="SandSupportTileBase" Abstract="True">
-        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <TerrainDef Name="AnySandSupportTileBase" Abstract="True">
         <edgeType>Hard</edgeType>
         <renderPrecedence>200</renderPrecedence>
 
         <layerable>true</layerable>
         <designationCategory>Floors</designationCategory>
         <fertility>0</fertility>
-        <constructEffect>ConstructMetal</constructEffect>
         <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
     </TerrainDef>
+
 
 
     <TerrainAffordanceDef>
@@ -19,12 +18,8 @@
         <order>4200</order>
     </TerrainAffordanceDef>
 
-    <TerrainDef ParentName="SandSupportTileBase">
-        <defName>SandSupportTile</defName>
-        <label>sand support tile</label>
-        <description>Special tiles placed on top of sand, to support heavier structures.</description>
-
-        <color>(80, 80, 80)</color>
+    <TerrainDef Name="SandSupportTileBase" ParentName="AnySandSupportTileBase" Abstract="True">
+        <designatorDropdown>SandSupportTile</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceSandSupportTile</terrainAffordanceNeeded>
         <affordances>
@@ -32,6 +27,22 @@
             <li>Medium</li>
             <li>Heavy</li>
         </affordances>
+    </TerrainDef>
+
+    <DesignatorDropdownGroupDef>
+        <defName>SandSupportTile</defName>
+    </DesignatorDropdownGroupDef>
+
+
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>SandSupportTile</defName>
+        <label>sand support tile</label>
+        <description>Special tiles placed on top of sand, to support heavier structures.</description>
+
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <color>(80, 80, 80)</color>
+        <constructEffect>ConstructMetal</constructEffect>
+
         <statBases>
             <Beauty>-1</Beauty>
             <WorkToBuild>1000</WorkToBuild>
@@ -45,24 +56,210 @@
     </TerrainDef>
 
 
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>WoodenSandSupportTile</defName>
+        <label>sand support tile (wood-surfaced)</label>
+        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with wood planks.</description>
+
+        <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+        <color>(108, 78, 55)</color>
+        <constructEffect>ConstructWood</constructEffect>
+
+        <burnedDef>SandSupportTile</burnedDef>
+        <statBases>
+            <Beauty>0</Beauty>
+            <WorkToBuild>1100</WorkToBuild>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <Steel>8</Steel>
+            <WoodLog>3</WoodLog>
+        </costList>
+        <researchPrerequisites>
+            <li>SurfacedSandSupportTilesResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+    <TerrainDef Name="CarpetSandSupportTileBase" ParentName="SandSupportTileBase" Abstract="True">
+        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with carpet.</description>
+
+        <texturePath>Terrain/Surfaces/Carpet</texturePath>
+        <constructEffect>ConstructDirt</constructEffect>
+
+        <burnedDef>SandSupportTile</burnedDef>
+        <statBases>
+            <Beauty>2</Beauty>
+            <WorkToBuild>1900</WorkToBuild>
+            <Flammability>0.32</Flammability>
+        </statBases>
+        <costList>
+            <Steel>8</Steel>
+            <Cloth>7</Cloth>
+        </costList>
+        <researchPrerequisites>
+            <li>SurfacedSandSupportTilesResearch</li>
+            <li>CarpetMaking</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSandSupportTileBase">
+        <defName>RedCarpetSandSupportTile</defName>
+        <label>sand support tile (red carpet-surfaced)</label>
+        <color>(118, 49, 57)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSandSupportTileBase">
+        <defName>GreenCarpetSandSupportTile</defName>
+        <label>sand support tile (green carpet-surfaced)</label>
+        <color>(89, 105, 62)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSandSupportTileBase">
+        <defName>BlueCarpetSandSupportTile</defName>
+        <label>sand support tile (blue carpet-surfaced)</label>
+        <color>(24, 65, 121)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSandSupportTileBase">
+        <defName>CreamCarpetSandSupportTile</defName>
+        <label>sand support tile (cream carpet-surfaced)</label>
+        <color>(195, 192, 176)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSandSupportTileBase">
+        <defName>DarkCarpetSandSupportTile</defName>
+        <label>sand support tile (dark carpet-surfaced)</label>
+        <color>(81, 81, 81)</color>
+    </TerrainDef>
+
+
+    <TerrainDef Name="StoneSandSupportTileBase" ParentName="SandSupportTileBase" Abstract="True">
+        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with stone tiles.</description>
+
+        <texturePath>Terrain/Surfaces/TileStone</texturePath>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <statBases>
+            <Beauty>1</Beauty>
+            <WorkToBuild>2200</WorkToBuild>
+        </statBases>
+        <researchPrerequisites>
+            <li>SurfacedSandSupportTilesResearch</li>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSandSupportTileBase">
+        <defName>SandstoneSandSupportTile</defName>
+        <label>sand support tile (sandstone tile-surfaced)</label>
+        <color>(126, 104, 94)</color>
+
+        <costList>
+            <Steel>8</Steel>
+            <BlocksSandstone>4</BlocksSandstone>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSandSupportTileBase">
+        <defName>GraniteSandSupportTile</defName>
+        <label>sand support tile (granite tile-surfaced)</label>
+        <color>(105, 95, 97)</color>
+
+        <costList>
+            <Steel>8</Steel>
+            <BlocksGranite>4</BlocksGranite>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSandSupportTileBase">
+        <defName>LimestoneSandSupportTile</defName>
+        <label>sand support tile (sandstone tile-surfaced)</label>
+        <color>(158, 153, 135)</color>
+
+        <costList>
+            <Steel>8</Steel>
+            <BlocksLimestone>4</BlocksLimestone>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSandSupportTileBase">
+        <defName>SlateSandSupportTile</defName>
+        <label>sand support tile (slate tile-surfaced)</label>
+        <color>(100, 100, 100)</color>
+
+        <costList>
+            <Steel>8</Steel>
+            <BlocksSlate>4</BlocksSlate>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSandSupportTileBase">
+        <defName>MarbleSandSupportTile</defName>
+        <label>sand support tile (marble tile-surfaced)</label>
+        <color>(132, 135, 132)</color>
+
+        <costList>
+            <Steel>8</Steel>
+            <BlocksMarble>4</BlocksMarble>
+        </costList>
+    </TerrainDef>
+
+
+    <TerrainDef ParentName="SandSupportTileBase">
+        <defName>SterileSandSupportTile</defName>
+        <label>sand support tile (sterile tile-surfaced)</label>
+        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with sterile tiles.</description>
+
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <color>(181, 181, 181)</color>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <statBases>
+            <Beauty>0</Beauty>
+            <WorkToBuild>2700</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>11</Steel>
+            <Silver>12</Silver>
+        </costList>
+        <researchPrerequisites>
+            <li>SurfacedSandSupportTilesResearch</li>
+            <li>SterileMaterials</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+
     <TerrainAffordanceDef>
         <defName>AffordanceSoftSandSupportTile</defName>
         <label>soft sand</label>
         <order>4300</order>
     </TerrainAffordanceDef>
 
-    <TerrainDef ParentName="SandSupportTileBase">
-        <defName>SoftSandSupportTile</defName>
-        <label>soft sand support tile</label>
-        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
-
-        <color>(140, 140, 140)</color>
+    <TerrainDef Name="SoftSandSupportTileBase" ParentName="AnySandSupportTileBase" Abstract="True">
+        <designatorDropdown>SoftSandSupportTile</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceSoftSandSupportTile</terrainAffordanceNeeded>
         <affordances>
             <li>Light</li>
             <li>Medium</li>
         </affordances>
+    </TerrainDef>
+
+    <DesignatorDropdownGroupDef>
+        <defName>SoftSandSupportTile</defName>
+    </DesignatorDropdownGroupDef>
+
+
+    <TerrainDef ParentName="SoftSandSupportTileBase">
+        <defName>SoftSandSupportTile</defName>
+        <label>soft sand support tile</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <color>(140, 140, 140)</color>
+
         <statBases>
             <Beauty>-1</Beauty>
             <WorkToBuild>1500</WorkToBuild>
@@ -72,6 +269,184 @@
         </costList>
         <researchPrerequisites>
             <li>SoftSandSupportTilesResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+    <TerrainDef ParentName="SoftSandSupportTileBase">
+        <defName>WoodenSoftSandSupportTile</defName>
+        <label>soft sand support tile (wood-surfaced)</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with wood planks.</description>
+
+        <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+        <color>(108, 78, 55)</color>
+        <constructEffect>ConstructWood</constructEffect>
+
+        <burnedDef>SoftSandSupportTile</burnedDef>
+        <statBases>
+            <Beauty>0</Beauty>
+            <WorkToBuild>1600</WorkToBuild>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <Steel>12</Steel>
+            <WoodLog>3</WoodLog>
+        </costList>
+        <researchPrerequisites>
+            <li>SoftSandSupportTilesResearch</li>
+            <li>SurfacedSandSupportTilesResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+
+    <TerrainDef Name="CarpetSoftSandSupportTileBase" ParentName="SoftSandSupportTileBase" Abstract="True">
+        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with carpet.</description>
+
+        <texturePath>Terrain/Surfaces/Carpet</texturePath>
+        <constructEffect>ConstructDirt</constructEffect>
+
+        <burnedDef>SoftSandSupportTile</burnedDef>
+        <statBases>
+            <Beauty>2</Beauty>
+            <WorkToBuild>2400</WorkToBuild>
+            <Flammability>0.32</Flammability>
+        </statBases>
+        <costList>
+            <Steel>12</Steel>
+            <Cloth>7</Cloth>
+        </costList>
+        <researchPrerequisites>
+            <li>SoftSandSupportTilesResearch</li>
+            <li>SurfacedSandSupportTilesResearch</li>
+            <li>CarpetMaking</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSoftSandSupportTileBase">
+        <defName>RedCarpetSoftSandSupportTile</defName>
+        <label>soft sand support tile (red carpet-surfaced)</label>
+        <color>(118, 49, 57)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSoftSandSupportTileBase">
+        <defName>GreenCarpetSoftSandSupportTile</defName>
+        <label>soft sand support tile (green carpet-surfaced)</label>
+        <color>(89, 105, 62)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSoftSandSupportTileBase">
+        <defName>BlueCarpetSoftSandSupportTile</defName>
+        <label>soft sand support tile (blue carpet-surfaced)</label>
+        <color>(24, 65, 121)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSoftSandSupportTileBase">
+        <defName>CreamCarpetSoftSandSupportTile</defName>
+        <label>soft sand support tile (cream carpet-surfaced)</label>
+        <color>(195, 192, 176)</color>
+    </TerrainDef>
+
+    <TerrainDef ParentName="CarpetSoftSandSupportTileBase">
+        <defName>DarkCarpetSandSupportTile</defName>
+        <label>soft sand support tile (dark carpet-surfaced)</label>
+        <color>(81, 81, 81)</color>
+    </TerrainDef>
+
+
+    <TerrainDef Name="StoneSoftSandSupportTileBase" ParentName="SoftSandSupportTileBase" Abstract="True">
+        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with stone tiles.</description>
+
+        <texturePath>Terrain/Surfaces/TileStone</texturePath>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <statBases>
+            <Beauty>1</Beauty>
+            <WorkToBuild>2700</WorkToBuild>
+        </statBases>
+        <researchPrerequisites>
+            <li>SoftSandSupportTilesResearch</li>
+            <li>SurfacedSandSupportTilesResearch</li>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSoftSandSupportTileBase">
+        <defName>SandstoneSoftSandSupportTile</defName>
+        <label>soft sand support tile (sandstone tile-surfaced)</label>
+        <color>(126, 104, 94)</color>
+
+        <costList>
+            <Steel>12</Steel>
+            <BlocksSandstone>4</BlocksSandstone>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSoftSandSupportTileBase">
+        <defName>GraniteSoftSandSupportTile</defName>
+        <label>soft sand support tile (granite tile-surfaced)</label>
+        <color>(105, 95, 97)</color>
+
+        <costList>
+            <Steel>12</Steel>
+            <BlocksGranite>4</BlocksGranite>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSoftSandSupportTileBase">
+        <defName>LimestoneSoftSandSupportTile</defName>
+        <label>soft sand support tile (sandstone tile-surfaced)</label>
+        <color>(158, 153, 135)</color>
+
+        <costList>
+            <Steel>12</Steel>
+            <BlocksLimestone>4</BlocksLimestone>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSoftSandSupportTileBase">
+        <defName>SlateSoftSandSupportTile</defName>
+        <label>soft sand support tile (slate tile-surfaced)</label>
+        <color>(100, 100, 100)</color>
+
+        <costList>
+            <Steel>12</Steel>
+            <BlocksSlate>4</BlocksSlate>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="StoneSoftSandSupportTileBase">
+        <defName>MarbleSoftSandSupportTile</defName>
+        <label>soft sand support tile (marble tile-surfaced)</label>
+        <color>(132, 135, 132)</color>
+
+        <costList>
+            <Steel>12</Steel>
+            <BlocksMarble>4</BlocksMarble>
+        </costList>
+    </TerrainDef>
+
+
+    <TerrainDef ParentName="SoftSandSupportTileBase">
+        <defName>SterileSoftSandSupportTile</defName>
+        <label>soft sand support tile (sterile tile-surfaced)</label>
+        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with sterile tiles.</description>
+
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <color>(181, 181, 181)</color>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <statBases>
+            <Beauty>0</Beauty>
+            <WorkToBuild>2700</WorkToBuild>
+        </statBases>
+        <costList>
+            <Steel>15</Steel>
+            <Silver>12</Silver>
+        </costList>
+        <researchPrerequisites>
+            <li>SoftSandSupportTilesResearch</li>
+            <li>SurfacedSandSupportTilesResearch</li>
+            <li>SterileMaterials</li>
         </researchPrerequisites>
     </TerrainDef>
 </Defs>
