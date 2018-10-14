@@ -27,6 +27,9 @@
         <researchViewY>1</researchViewY>
 
         <baseCost>500</baseCost>
+        <prerequisites>
+            <li>SandSupportTilesResearch</li>
+        </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
     </ResearchProjectDef>
@@ -58,9 +61,6 @@
         <baseCost>1000</baseCost>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
-        <prerequisites>
-            <li>ConcreteSandResearch</li>
-        </prerequisites>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -70,7 +70,10 @@
         <researchViewX>2</researchViewX>
         <researchViewY>2</researchViewY>
 
-        <baseCost>2000</baseCost>
+        <baseCost>1500</baseCost>
+        <prerequisites>
+            <li>ConcreteSandResearch</li>
+        </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
     </ResearchProjectDef>
@@ -85,11 +88,11 @@
         <researchViewY>3</researchViewY>
 
         <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
         <prerequisites>
             <li>ConcreteSandResearch</li>
         </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
     </ResearchProjectDef>
 
 
@@ -102,11 +105,11 @@
         <researchViewY>4</researchViewY>
 
         <baseCost>500</baseCost>
-        <techLevel>Industrial</techLevel>
-        <tab>Sand</tab>
         <prerequisites>
             <li>ConcreteSandResearch</li>
         </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <tab>Sand</tab>
     </ResearchProjectDef>
 
 
@@ -119,6 +122,9 @@
         <researchViewY>3</researchViewY>
 
         <baseCost>800</baseCost>
+        <prerequisites>
+            <li>SoftConcreteSandResearch</li>
+        </prerequisites>
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
     </ResearchProjectDef>
