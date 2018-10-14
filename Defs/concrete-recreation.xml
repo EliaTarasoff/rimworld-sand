@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="IntricateSandFurnitureBase" ParentName="FurnitureWithQualityBase" Abstract="True">
+        <graphicData>
+            <color>(255, 240, 200)</color>
+        </graphicData>
+        <uiIconColor>(255, 240, 200)</uiIconColor>
+        <altitudeLayer>Building</altitudeLayer>
+        <designationCategory>Joy</designationCategory>
+        <uiIconScale>0.9</uiIconScale>
+        <constructEffect>ConstructMetal</constructEffect>
+
+        <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
+        <minifiedDef />
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <fillPercent>0.50</fillPercent>
+        <passability>PassThroughOnly</passability>
+        <pathCost>80</pathCost>
+        <canOverlapZones>false</canOverlapZones>
+        <coversFloor>true</coversFloor>
+        <researchPrerequisites>
+            <li>IntricateConcreteSandResearch</li>
+        </researchPrerequisites>
+        <comps>
+            <li Class="CompProperties_RoomIdentifier">
+                <roomStat>Impressiveness</roomStat>
+            </li>
+        </comps>
+        <statBases>
+            <Flammability>0.25</Flammability>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="IntricateSandFurnitureBase">
+        <defName>SandChessTable</defName>
+        <label>soft concrete sand chess table</label>
+        <description>A chess table made from soft concrete sand. You feel like this cheapens the game a little.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Joy/ChessTable</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.65, 0.25, 0.6)</volume>
+                <offset>(0, 0, -0.15)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.09375,0.296875,0.796875,0.703125)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <rotatable>false</rotatable>
+
+        <costList>
+            <ConcreteSandForm>2</ConcreteSandForm>
+            <WoodLog>2</WoodLog>
+        </costList>
+        <minTechLevelToBuild>Medieval</minTechLevelToBuild>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <JoyGainFactor>0.8</JoyGainFactor>
+        </statBases>
+        <building>
+            <joyKind>Gaming_Cerebral</joyKind>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="IntricateSandFurnitureBase">
+        <defName>SandCardsTable</defName>
+        <label>soft concrete sand cards table</label>
+        <description>A smooth table made from soft concrete sand, with cheap wooden cards. It's not as nice as one made from proper materials, but it'll do in a pinch.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Joy/PokerTable</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,4)</drawSize>
+            <shadowData>
+                <volume>(1.6, 0.3, 1.6)</volume>
+                <offset>(0, 0, -0.15)</offset>
+            </shadowData>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <size>(2,2)</size>
+
+        <costList>
+            <ConcreteSandForm>4</ConcreteSandForm>
+            <Cloth>25</Cloth>
+            <WoodLog>4</WoodLog>
+        </costList>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <JoyGainFactor>1.04</JoyGainFactor>
+        </statBases>
+        <building>
+            <joyKind>Gaming_Cerebral</joyKind>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="IntricateSandFurnitureBase">
+        <defName>SandBilliardsTable</defName>
+        <label>soft concrete sand billiards table</label>
+        <description>A cheap billiards table, made from soft concrete sand. At least it's level.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Joy/BilliardsTable</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,4)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <staticSunShadowHeight>0.2</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+        <size>(2,3)</size>
+
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <JoyGainFactor>1.04</JoyGainFactor>
+        </statBases>
+        <building>
+            <joyKind>Gaming_Dexterity</joyKind>
+        </building>
+        <costList>
+            <ConcreteSandForm>8</ConcreteSandForm>
+            <Cloth>40</Cloth>
+            <WoodLog>4</WoodLog>
+        </costList>
+        <placeWorkers>
+            <li>PlaceWorker_NeverAdjacentUnstandable</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="IntricateSandFurnitureBase">
+        <defName>SandTubeTelevision</defName>
+        <label>soft concrete sand tube television</label>
+        <description>A small box of soft concrete sand, shaped like a tube television, with static painted on the screen. It even has adjustable antennas!</description>
+
+        <graphicData>
+            <texPath>Things/Building/Joy/TubeTelevision</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shadowData>
+                <volume>(0.5, 0.3, 0.4)</volume>
+            </shadowData>
+        </graphicData>
+        <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+        <placeWorkers>
+            <li>PlaceWorker_WatchArea</li>
+        </placeWorkers>
+        <rotatable>true</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+
+        <thingCategories>
+            <li>BuildingsJoy</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <JoyGainFactor>0.96</JoyGainFactor>
+        </statBases>
+        <costList>
+            <ConcreteSandForm>3</ConcreteSandForm>
+            <Steel>2</Steel>
+        </costList>
+        <building>
+            <joyKind>Television</joyKind>
+            <spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+            <boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+            <watchBuildingStandDistanceRange>
+                <min>2</min>
+                <max>4</max>
+            </watchBuildingStandDistanceRange>
+            <watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+        </building>
+    </ThingDef>
+</Defs>

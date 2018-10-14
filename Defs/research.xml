@@ -110,9 +110,9 @@
 
 
     <ResearchProjectDef>
-        <defName>ConcreteSandArtResearch</defName>
-        <label>concrete sand art</label>
-        <description>Concrete made from soft sand can be used to produce pleasant-looking art installations. While not as pleasing as other materials, it might be all that's available in harsh environments.</description>
+        <defName>IntricateConcreteSandResearch</defName>
+        <label>intricate concrete sand</label>
+        <description>Soft concrete sand can be shaped into intricate forms with enough practice. While none of this is likely to be called "art", it might still be pleasing or entertaining to look at.</description>
         <researchViewX>3</researchViewX>
         <researchViewY>3</researchViewY>
 
