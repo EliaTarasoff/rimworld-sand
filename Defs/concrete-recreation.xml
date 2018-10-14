@@ -172,9 +172,9 @@
             <li>BuildingsJoy</li>
         </thingCategories>
         <statBases>
-            <MaxHitPoints>60</MaxHitPoints>
-            <WorkToBuild>2000</WorkToBuild>
-            <JoyGainFactor>0.96</JoyGainFactor>
+            <MaxHitPoints>40</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <JoyGainFactor>0.4</JoyGainFactor>
         </statBases>
         <costList>
             <ConcreteSandForm>3</ConcreteSandForm>
