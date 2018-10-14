@@ -6,7 +6,6 @@
     </ResearchTabDef>
 
 
-
     <ResearchProjectDef>
         <defName>SandSupportTilesResearch</defName>
         <label>sand support tiles</label>
@@ -50,7 +49,6 @@
     </ResearchProjectDef>
 
 
-
     <ResearchProjectDef>
         <defName>ConcreteSandResearch</defName>
         <label>concreted sand</label>
@@ -79,7 +77,6 @@
     </ResearchProjectDef>
 
 
-
     <ResearchProjectDef>
         <defName>ConcreteSandWallResearch</defName>
         <label>concrete sand wall</label>
@@ -96,7 +93,6 @@
     </ResearchProjectDef>
 
 
-
     <ResearchProjectDef>
         <defName>ConcreteSandBeddingResearch</defName>
         <label>concrete sand bedding</label>
@@ -111,7 +107,6 @@
         <techLevel>Industrial</techLevel>
         <tab>Sand</tab>
     </ResearchProjectDef>
-
 
 
     <ResearchProjectDef>

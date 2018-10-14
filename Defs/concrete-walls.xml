@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef Name="ConcreteSandWall" ParentName="BuildingBase">
-        <defName>ConcreteSandWall</defName>
-        <label>concrete sand wall</label>
-        <description>A wall made of concrete sand.</description>
-
+    <ThingDef Name="ConcreteSandWallBase" ParentName="BuildingBase">
         <graphicData>
-            <color>(127, 120, 100)</color>
             <texPath>Things/Building/Linked/Wall</texPath>
             <graphicClass>Graphic_Appearances</graphicClass>
             <linkType>CornerFiller</linkType>
@@ -26,19 +21,12 @@
             </damageData>
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
-        <uiIconColor>(127, 120, 100)</uiIconColor>
 
         <thingClass>Building</thingClass>
         <category>Building</category>
         <costList>
             <ConcreteSandForm>2</ConcreteSandForm>
         </costList>
-        <statBases>
-            <Beauty>-1</Beauty>
-            <MaxHitPoints>200</MaxHitPoints>
-            <WorkToBuild>1500</WorkToBuild>
-            <Flammability>0.25</Flammability>
-        </statBases>
         <altitudeLayer>Building</altitudeLayer>
         <passability>Impassable</passability>
         <blockWind>true</blockWind>
@@ -50,7 +38,6 @@
         <rotatable>false</rotatable>
         <selectable>true</selectable>
         <neverMultiSelect>true</neverMultiSelect>
-        <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <holdsRoof>true</holdsRoof>
         <designationCategory>Structure</designationCategory>
         <staticSunShadowHeight>1.0</staticSunShadowHeight>
@@ -69,8 +56,50 @@
                 <multiplier>2</multiplier>
             </li>
         </damageMultipliers>
+    </ThingDef>
+
+    <ThingDef ParentName="ConcreteSandWallBase">
+        <defName>ConcreteSandWall</defName>
+        <label>concrete sand wall</label>
+        <description>A wall made of concrete sand.</description>
+
+        <graphicData>
+            <color>(127, 120, 100)</color>
+        </graphicData>
+        <uiIconColor>(127, 120, 100)</uiIconColor>
+
+        <statBases>
+            <Beauty>-1</Beauty>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Flammability>0.25</Flammability>
+        </statBases>
+        <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <researchPrerequisites>
             <li>ConcreteSandWallResearch</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="ConcreteSandWallBase">
+        <defName>SoftConcreteSandWall</defName>
+        <label>soft concrete sand wall</label>
+        <description>A wall made of soft concrete sand. Prettier than one made from coarse sand.</description>
+
+        <graphicData>
+            <color>(127, 125, 115)</color>
+        </graphicData>
+        <uiIconColor>(127, 125, 115)</uiIconColor>
+
+        <statBases>
+            <Beauty>0</Beauty>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0.25</Flammability>
+        </statBases>
+        <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
+        <researchPrerequisites>
+            <li>ConcreteSandWallResearch</li>
+            <li>SoftConcreteSandResearch</li>
         </researchPrerequisites>
     </ThingDef>
 </Defs>
