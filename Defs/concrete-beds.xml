@@ -42,7 +42,6 @@
         <graphicData>
             <color>(255, 240, 200)</color>
         </graphicData>
-        <uiIconColor>(255, 240, 200)</uiIconColor>
         <designatorDropdown>SandBedding</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
@@ -125,7 +124,6 @@
         <graphicData>
             <color>(255, 250, 230)</color>
         </graphicData>
-        <uiIconColor>(255, 250, 230)</uiIconColor>
         <designatorDropdown>SoftSandBedding</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>

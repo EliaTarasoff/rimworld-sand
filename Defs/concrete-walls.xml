@@ -2,8 +2,8 @@
 <Defs>
     <ThingDef Name="ConcreteSandWallBase" ParentName="BuildingBase" Abstract="True">
         <graphicData>
-            <texPath>Things/Building/Linked/Wall</texPath>
-            <graphicClass>Graphic_Appearances</graphicClass>
+            <color>(175, 165, 130)</color>
+            <uiIconColor>(175, 165, 130)</uiIconColor>
             <linkType>CornerFiller</linkType>
             <linkFlags>
                 <li>Wall</li>
@@ -20,7 +20,6 @@
                 <edgeRight>Damage/Edge</edgeRight>
             </damageData>
         </graphicData>
-        <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
 
         <thingClass>Building</thingClass>
         <category>Building</category>
@@ -64,9 +63,10 @@
         <description>A wall made of concrete sand.</description>
 
         <graphicData>
-            <color>(127, 120, 100)</color>
+            <graphicClass>Graphic_Appearances</graphicClass>
+            <texPath>Things/Building/Linked/Wall</texPath>
         </graphicData>
-        <uiIconColor>(127, 120, 100)</uiIconColor>
+        <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
 
         <statBases>
             <Beauty>-1</Beauty>
@@ -83,12 +83,13 @@
     <ThingDef ParentName="ConcreteSandWallBase">
         <defName>SoftConcreteSandWall</defName>
         <label>soft concrete sand wall</label>
-        <description>A wall made of soft concrete sand. Prettier than one made from coarse sand.</description>
+        <description>A wall made of soft concrete sand. Not ugly, like one made from coarse sand.</description>
 
         <graphicData>
-            <color>(127, 125, 115)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
         </graphicData>
-        <uiIconColor>(127, 125, 115)</uiIconColor>
+        <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
 
         <statBases>
             <Beauty>0</Beauty>

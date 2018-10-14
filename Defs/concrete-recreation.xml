@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef Name="IntricateSandFurnitureBase" ParentName="FurnitureWithQualityBase" Abstract="True">
+    <ThingDef Name="IntricateSandFurnitureBase" ParentName="BuildingBase" Abstract="True">
         <graphicData>
             <color>(255, 240, 200)</color>
         </graphicData>
-        <uiIconColor>(255, 240, 200)</uiIconColor>
         <altitudeLayer>Building</altitudeLayer>
         <designationCategory>Joy</designationCategory>
         <uiIconScale>0.9</uiIconScale>
         <constructEffect>ConstructMetal</constructEffect>
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
-        <minifiedDef />
         <socialPropernessMatters>true</socialPropernessMatters>
         <fillPercent>0.50</fillPercent>
         <passability>PassThroughOnly</passability>
@@ -168,9 +166,6 @@
         <rotatable>true</rotatable>
         <defaultPlacingRot>South</defaultPlacingRot>
 
-        <thingCategories>
-            <li>BuildingsJoy</li>
-        </thingCategories>
         <statBases>
             <MaxHitPoints>40</MaxHitPoints>
             <WorkToBuild>1000</WorkToBuild>
