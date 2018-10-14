@@ -51,7 +51,7 @@
 
     <ResearchProjectDef>
         <defName>ConcreteSandResearch</defName>
-        <label>concreted sand</label>
+        <label>concrete sand</label>
         <description>Polymerize sand into a form of concrete, to lock the sand in place and keep it from dirtying other surfaces.</description>
         <researchViewX>0</researchViewX>
         <researchViewY>2</researchViewY>
@@ -63,7 +63,7 @@
 
     <ResearchProjectDef>
         <defName>SoftConcreteSandResearch</defName>
-        <label>concreted soft sand</label>
+        <label>soft concrete sand</label>
         <description>Building with soft sand requires even more skill and knowledge than coarse sand, but can be used to produce more pleasant-looking items.</description>
         <researchViewX>2</researchViewX>
         <researchViewY>2</researchViewY>
