@@ -3,7 +3,6 @@
     <ThingDef Name="ConcreteSandWallBase" ParentName="BuildingBase" Abstract="True">
         <graphicData>
             <color>(175, 165, 130)</color>
-            <uiIconColor>(175, 165, 130)</uiIconColor>
             <linkType>CornerFiller</linkType>
             <linkFlags>
                 <li>Wall</li>
@@ -20,6 +19,7 @@
                 <edgeRight>Damage/Edge</edgeRight>
             </damageData>
         </graphicData>
+        <uiIconColor>(175, 165, 130)</uiIconColor>
 
         <thingClass>Building</thingClass>
         <category>Building</category>
