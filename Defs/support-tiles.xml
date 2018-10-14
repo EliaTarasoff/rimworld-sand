@@ -37,7 +37,7 @@
     <TerrainDef ParentName="SandSupportTileBase">
         <defName>SandSupportTile</defName>
         <label>sand support tile</label>
-        <description>Special tiles placed on top of sand, to support heavier structures.</description>
+        <description>Special tiles, pilons and girders, placed on top of sand to support heavier structures.</description>
 
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
         <color>(80, 80, 80)</color>
@@ -59,7 +59,7 @@
     <TerrainDef ParentName="SandSupportTileBase">
         <defName>WoodenSandSupportTile</defName>
         <label>sand support tile (wood-surfaced)</label>
-        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with wood planks.</description>
+        <description>These sand support tiles are surfaced with wooden planks.</description>
 
         <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
         <color>(108, 78, 55)</color>
@@ -82,7 +82,7 @@
 
 
     <TerrainDef Name="CarpetSandSupportTileBase" ParentName="SandSupportTileBase" Abstract="True">
-        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with carpet.</description>
+        <description>These sand support tiles are surfaced with carpet.</description>
 
         <texturePath>Terrain/Surfaces/Carpet</texturePath>
         <constructEffect>ConstructDirt</constructEffect>
@@ -135,7 +135,7 @@
 
 
     <TerrainDef Name="StoneSandSupportTileBase" ParentName="SandSupportTileBase" Abstract="True">
-        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with stone tiles.</description>
+        <description>These sand support tiles are surfaced with stone tiles.</description>
 
         <texturePath>Terrain/Surfaces/TileStone</texturePath>
         <constructEffect>ConstructMetal</constructEffect>
@@ -209,7 +209,7 @@
     <TerrainDef ParentName="SandSupportTileBase">
         <defName>SterileSandSupportTile</defName>
         <label>sand support tile (sterile tile-surfaced)</label>
-        <description>Special tiles placed on top of sand, to support heavier structures. These are surfaced with sterile tiles.</description>
+        <description>These sand support tiles are surfaced with sterile tiles.</description>
 
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
         <color>(181, 181, 181)</color>
@@ -255,7 +255,7 @@
     <TerrainDef ParentName="SoftSandSupportTileBase">
         <defName>SoftSandSupportTile</defName>
         <label>soft sand support tile</label>
-        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+        <description>Heavily specialized tiles, pilons and girders placed on top of soft sand, to support heavier structures.</description>
 
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
         <color>(140, 140, 140)</color>
@@ -276,7 +276,7 @@
     <TerrainDef ParentName="SoftSandSupportTileBase">
         <defName>WoodenSoftSandSupportTile</defName>
         <label>soft sand support tile (wood-surfaced)</label>
-        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with wood planks.</description>
+        <description>These soft sand support tiles are surfaced with wood planks.</description>
 
         <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
         <color>(108, 78, 55)</color>
@@ -300,7 +300,7 @@
 
 
     <TerrainDef Name="CarpetSoftSandSupportTileBase" ParentName="SoftSandSupportTileBase" Abstract="True">
-        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with carpet.</description>
+        <description>These soft sand support tiles are surfaced with carpet.</description>
 
         <texturePath>Terrain/Surfaces/Carpet</texturePath>
         <constructEffect>ConstructDirt</constructEffect>
@@ -354,7 +354,7 @@
 
 
     <TerrainDef Name="StoneSoftSandSupportTileBase" ParentName="SoftSandSupportTileBase" Abstract="True">
-        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with stone tiles.</description>
+        <description>These soft sand support tiles are surfaced with stone tiles.</description>
 
         <texturePath>Terrain/Surfaces/TileStone</texturePath>
         <constructEffect>ConstructMetal</constructEffect>
@@ -429,7 +429,7 @@
     <TerrainDef ParentName="SoftSandSupportTileBase">
         <defName>SterileSoftSandSupportTile</defName>
         <label>soft sand support tile (sterile tile-surfaced)</label>
-        <description>Special tiles placed on top of soft sand, to support heavier structures. These are surfaced with sterile tiles.</description>
+        <description>These soft sand support tiles are surfaced with sterile tiles.</description>
 
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
         <color>(181, 181, 181)</color>

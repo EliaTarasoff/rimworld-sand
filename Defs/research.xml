@@ -9,7 +9,7 @@
     <ResearchProjectDef>
         <defName>SandSupportTilesResearch</defName>
         <label>sand support tiles</label>
-        <description>Special tiles placed on top of sand, to support heavier structures.</description>
+        <description>Special tiles, pilons and girders, placed on top of sand to support heavier structures.</description>
         <researchViewX>0</researchViewX>
         <researchViewY>0</researchViewY>
 
@@ -21,7 +21,7 @@
     <ResearchProjectDef>
         <defName>SurfacedSandSupportTilesResearch</defName>
         <label>sand support tiles (material-surfaced)</label>
-        <description>Special tiles placed on top of sand, to support heavier structures. These ones are surfaced with an additional material, for decorative or functional purposes.</description>
+        <description>Surface sand support tiles with an additional material, for decorative or functional purposes.</description>
         <researchViewX>1</researchViewX>
         <researchViewY>1</researchViewY>
 
@@ -36,7 +36,7 @@
     <ResearchProjectDef>
         <defName>SoftSandSupportTilesResearch</defName>
         <label>soft sand support tiles</label>
-        <description>Special tiles placed on top of soft sand, to support heavier structures.</description>
+        <description>Building on top of soft sand, requires even more specialized knowledge and construction techniques.</description>
         <researchViewX>2</researchViewX>
         <researchViewY>0</researchViewY>
 
