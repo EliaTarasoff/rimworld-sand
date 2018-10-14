@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <DesignatorDropdownGroupDef>
-        <defName>SandBedding</defName>
-    </DesignatorDropdownGroupDef>
-
     <ThingDef Name="ConcreteSandBedBase" ParentName="BuildingBase" Abstract="True">
         <uiIconScale>0.90</uiIconScale>
         <drawGUIOverlay>True</drawGUIOverlay>
         <defaultPlacingRot>South</defaultPlacingRot>
         <altitudeLayer>Building</altitudeLayer>
-        <designatorDropdown>SandBedding</designatorDropdown>
 
         <thingClass>Building_Bed</thingClass>
         <designationCategory>Furniture</designationCategory>
@@ -39,11 +34,16 @@
     </ThingDef>
 
 
+    <DesignatorDropdownGroupDef>
+        <defName>SandBedding</defName>
+    </DesignatorDropdownGroupDef>
+
     <ThingDef Name="CoarseConcreteSandBedBase" ParentName="ConcreteSandBedBase" Abstract="True">
         <graphicData>
             <color>(255, 240, 200)</color>
         </graphicData>
         <uiIconColor>(255, 240, 200)</uiIconColor>
+        <designatorDropdown>SandBedding</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <statBases>
@@ -119,11 +119,16 @@
     </ThingDef>
 
 
+    <DesignatorDropdownGroupDef>
+        <defName>SoftSandBedding</defName>
+    </DesignatorDropdownGroupDef>
+
     <ThingDef Name="SoftConcreteSandBedBase" ParentName="ConcreteSandBedBase" Abstract="True">
         <graphicData>
             <color>(255, 250, 230)</color>
         </graphicData>
         <uiIconColor>(255, 250, 230)</uiIconColor>
+        <designatorDropdown>SoftSandBedding</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
         <statBases>
