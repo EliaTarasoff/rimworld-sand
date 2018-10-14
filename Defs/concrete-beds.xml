@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <DesignatorDropdownGroupDef>
+        <defName>SandBedding</defName>
+    </DesignatorDropdownGroupDef>
+
     <ThingDef Name="ConcreteSandBedBase" ParentName="BuildingBase" Abstract="True">
-        <graphicData>
-            <color>(255, 240, 200)</color>
-        </graphicData>
         <uiIconScale>0.90</uiIconScale>
         <drawGUIOverlay>True</drawGUIOverlay>
         <defaultPlacingRot>South</defaultPlacingRot>
         <altitudeLayer>Building</altitudeLayer>
+        <designatorDropdown>SandBedding</designatorDropdown>
 
         <thingClass>Building_Bed</thingClass>
         <designationCategory>Furniture</designationCategory>
         <scatterableOnMapGen>false</scatterableOnMapGen>
         <canOverlapZones>false</canOverlapZones>
         <coversFloor>true</coversFloor>
-        <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <passability>PassThroughOnly</passability>
-        <statBases>
-            <Flammability>0.25</Flammability>
-            <BedRestEffectiveness>0.9</BedRestEffectiveness>
-            <Comfort>0.5</Comfort>
-            <ImmunityGainSpeedFactor>1.035</ImmunityGainSpeedFactor>
-            <SurgerySuccessChanceFactor>0.85</SurgerySuccessChanceFactor>
-        </statBases>
         <building>
             <bed_healPerDay>3</bed_healPerDay>
             <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
@@ -42,12 +36,29 @@
             </li>
         </comps>
         <techLevel>Industrial</techLevel>
+    </ThingDef>
+
+
+    <ThingDef Name="CoarseConcreteSandBedBase" ParentName="ConcreteSandBedBase" Abstract="True">
+        <graphicData>
+            <color>(255, 240, 200)</color>
+        </graphicData>
+        <uiIconColor>(255, 240, 200)</uiIconColor>
+
+        <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
+        <statBases>
+            <Flammability>0.25</Flammability>
+            <BedRestEffectiveness>0.9</BedRestEffectiveness>
+            <Comfort>0.5</Comfort>
+            <ImmunityGainSpeedFactor>1.035</ImmunityGainSpeedFactor>
+            <SurgerySuccessChanceFactor>0.85</SurgerySuccessChanceFactor>
+        </statBases>
         <researchPrerequisites>
             <li>ConcreteSandBeddingResearch</li>
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="ConcreteSandBedBase">
+    <ThingDef ParentName="CoarseConcreteSandBedBase">
         <defName>ConcreteSandBed</defName>
         <label>concrete sand bed</label>
         <description>A thin sheet and pillow, on a concrete sand box. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
@@ -66,6 +77,7 @@
 
         <costList>
             <ConcreteSandForm>3</ConcreteSandForm>
+            <Cloth>50</Cloth>
         </costList>
         <statBases>
             <Beauty>-5</Beauty>
@@ -76,7 +88,7 @@
         <size>(1,2)</size>
     </ThingDef>
 
-    <ThingDef ParentName="ConcreteSandBedBase">
+    <ThingDef ParentName="CoarseConcreteSandBedBase">
         <defName>ConcreteSandDoubleBed</defName>
         <label>concrete sand double bed</label>
         <description>A thin sheet and pillows, on a concrete sand box, for two people. Cleaner than sleeping on the floor, but ugly and uncomfortable.</description>
@@ -95,11 +107,91 @@
 
         <costList>
             <ConcreteSandForm>6</ConcreteSandForm>
+            <Cloth>100</Cloth>
         </costList>
         <statBases>
             <Beauty>-10</Beauty>
             <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>2000</WorkToBuild>
+            <Mass>200</Mass>
+        </statBases>
+        <size>(2,2)</size>
+    </ThingDef>
+
+
+    <ThingDef Name="SoftConcreteSandBedBase" ParentName="ConcreteSandBedBase" Abstract="True">
+        <graphicData>
+            <color>(255, 250, 230)</color>
+        </graphicData>
+        <uiIconColor>(255, 250, 230)</uiIconColor>
+
+        <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
+        <statBases>
+            <Flammability>0.25</Flammability>
+            <BedRestEffectiveness>0.95</BedRestEffectiveness>
+            <Comfort>0.6</Comfort>
+            <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+            <SurgerySuccessChanceFactor>0.9</SurgerySuccessChanceFactor>
+        </statBases>
+        <researchPrerequisites>
+            <li>ConcreteSandBeddingResearch</li>
+            <li>SoftConcreteSandResearch</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="SoftConcreteSandBedBase">
+        <defName>SoftConcreteSandBed</defName>
+        <label>soft concrete sand bed</label>
+        <description>A sheet and pillow, on a concrete sand box. Cleaner than sleeping on the floor, but neutral in terms of looks and a bit uncomfortable.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rect>(0,0.05,1,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+
+        <costList>
+            <ConcreteSandForm>4</ConcreteSandForm>
+            <Cloth>70</Cloth>
+        </costList>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(1,2)</size>
+    </ThingDef>
+
+    <ThingDef ParentName="SoftConcreteSandBedBase">
+        <defName>SoftConcreteSandDoubleBed</defName>
+        <label>soft concrete sand double bed</label>
+        <description>A sheet and pillows, on a concrete sand box, for two people. Cleaner than sleeping on the floor, but neutral in terms of looks and a bit uncomfortable.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/DoubleBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.05,2.05)</drawSize>
+            <damageData>
+                <rect>(0,0.05,2,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+
+        <costList>
+            <ConcreteSandForm>8</ConcreteSandForm>
+            <Cloth>140</Cloth>
+        </costList>
+        <statBases>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
             <Mass>200</Mass>
         </statBases>
         <size>(2,2)</size>

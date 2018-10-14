@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <DesignatorDropdownGroupDef>
+        <defName>ConcreteSandWall</defName>
+    </DesignatorDropdownGroupDef>
+
     <ThingDef Name="ConcreteSandWallBase" ParentName="BuildingBase">
         <graphicData>
             <texPath>Things/Building/Linked/Wall</texPath>
@@ -21,6 +25,7 @@
             </damageData>
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+        <designatorDropdown>ConcreteSandWall</designatorDropdown>
 
         <thingClass>Building</thingClass>
         <category>Building</category>
