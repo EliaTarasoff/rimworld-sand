@@ -4,7 +4,7 @@
         <defName>ConcreteSandWall</defName>
     </DesignatorDropdownGroupDef>
 
-    <ThingDef Name="ConcreteSandWallBase" ParentName="BuildingBase">
+    <ThingDef Name="ConcreteSandWallBase" ParentName="BuildingBase" Abstract="True">
         <graphicData>
             <texPath>Things/Building/Linked/Wall</texPath>
             <graphicClass>Graphic_Appearances</graphicClass>
