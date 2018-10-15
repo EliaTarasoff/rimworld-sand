@@ -48,7 +48,7 @@
     <TerrainDef>
         <defName>SoftConcreteSand</defName>
         <label>soft concrete sand</label>
-        <description>Floor tiles made by polymerizing soft sand. It is neutral in terms of looks, slow to produce, and can't support much weight.</description>
+        <description>Floor tiles made by polymerizing soft sand. Slow to produce, and can't support much weight. Less ugly than one made from coarse ssand.</description>
 
         <texturePath>Terrain/Surfaces/PavedTile</texturePath>
         <color>(255, 240, 200)</color>
@@ -68,7 +68,7 @@
             <ConcreteSandForm>1</ConcreteSandForm>
         </costList>
         <statBases>
-            <Beauty>0</Beauty>
+            <Beauty>-1</Beauty>
             <WorkToBuild>1500</WorkToBuild>
             <Flammability>0.3</Flammability>
         </statBases>
