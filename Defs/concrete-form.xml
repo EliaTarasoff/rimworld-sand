@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef Name="ConcreteSandForm" ParentName="ResourceBase">
+    <ThingDef ParentName="ResourceBase">
         <defName>ConcreteSandForm</defName>
         <label>concrete sand form</label>
         <description>Various gas bladders and textile sheets, to hold concrete sand in place while it cures.</description>
@@ -25,9 +25,9 @@
         <tradeability>None</tradeability>
     </ThingDef>
 
-    <RecipeDef Name="MakeConcreteSandForm">
+    <RecipeDef>
         <defName>MakeConcreteSandForm</defName>
-        <label>concrete sand form</label>
+        <label>make concrete sand forms</label>
         <description>Create concrete sand forms.</description>
         <jobString>Creating concrete sand forms.</jobString>
 
@@ -36,7 +36,7 @@
         <effectWorking>Tailor</effectWorking>
         <soundWorking>Recipe_Tailor</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
-        <targetCountAdjustment>50</targetCountAdjustment>
+        <targetCountAdjustment>25</targetCountAdjustment>
         <ingredients>
             <li>
                 <filter>
