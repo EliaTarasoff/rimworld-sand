@@ -52,12 +52,17 @@
         <order>4100</order>
     </TerrainAffordanceDef>
 
+    <DesignatorDropdownGroupDef>
+        <defName>SoftConcreteSand</defName>
+    </DesignatorDropdownGroupDef>
+
     <TerrainDef ParentName="ConcreteSandBase">
         <defName>SoftConcreteSand</defName>
         <label>soft concrete sand</label>
         <description>Floor tiles made by polymerizing soft sand. Slow to produce, but less ugly than floors made from coarse sand.</description>
 
         <texturePath>Terrain/Surfaces/PavedTile</texturePath>
+        <designatorDropdown>SoftConcreteSand</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
         <affordances>
@@ -82,6 +87,7 @@
         <description>Floor tiles made by polymerizing soft sand, textured to look like bricks. Neutral in looks, but very slow to produce.</description>
 
         <texturePath>Terrain/Surfaces/TileStone</texturePath>
+        <designatorDropdown>SoftConcreteSand</designatorDropdown>
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
         <affordances>

@@ -60,8 +60,8 @@
         <description>A wall made of concrete sand. Very ugly, but made from readily available materials.</description>
 
         <graphicData>
-            <graphicClass>Graphic_Appearances</graphicClass>
-            <texPath>Things/Building/Linked/Wall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Linked/Rock_Atlas</texPath>
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
 
@@ -80,16 +80,21 @@
         </researchPrerequisites>
     </ThingDef>
 
+    <DesignatorDropdownGroupDef>
+        <defName>SoftConcreteSandWall</defName>
+    </DesignatorDropdownGroupDef>
+
     <ThingDef ParentName="ConcreteSandWallBase">
         <defName>SoftConcreteSandWall</defName>
         <label>soft concrete sand wall</label>
         <description>A wall made of soft concrete sand. Less ugly than one made from coarse sand.</description>
 
         <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+            <graphicClass>Graphic_Appearances</graphicClass>
+            <texPath>Things/Building/Linked/Wall</texPath>
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+        <designatorDropdown>SoftConcreteSandWall</designatorDropdown>
 
         <costList>
             <ConcreteSandForm>2</ConcreteSandForm>
@@ -110,13 +115,14 @@
     <ThingDef ParentName="ConcreteSandWallBase">
         <defName>TexturedSoftConcreteSandWall</defName>
         <label>textured soft concrete sand wall</label>
-        <description>A wall made of soft concrete sand, textured to look like bricks. Neutral in terms of looks, but very slow to produce.</description>
+        <description>A wall made of soft concrete sand, with a textured appearance. Neutral in terms of looks, but very slow to produce.</description>
 
         <graphicData>
-            <graphicClass>Graphic_Appearances</graphicClass>
-            <texPath>Things/Building/Linked/Wall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+        <designatorDropdown>SoftConcreteSandWall</designatorDropdown>
 
         <costList>
             <ConcreteSandForm>3</ConcreteSandForm>
