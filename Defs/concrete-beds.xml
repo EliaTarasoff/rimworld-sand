@@ -128,7 +128,7 @@
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
         <statBases>
-            <Flammability>0.25</Flammability>
+            <Flammability>0.35</Flammability>
             <BedRestEffectiveness>0.95</BedRestEffectiveness>
             <Comfort>0.6</Comfort>
             <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>

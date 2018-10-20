@@ -19,6 +19,7 @@
         <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <affordances>
             <li>Light</li>
+            <li>Medium</li>
         </affordances>
         <layerable>true</layerable>
         <designationCategory>Floors</designationCategory>
@@ -70,7 +71,7 @@
         <statBases>
             <Beauty>-1</Beauty>
             <WorkToBuild>1500</WorkToBuild>
-            <Flammability>0.3</Flammability>
+            <Flammability>0.2</Flammability>
         </statBases>
         <researchPrerequisites>
             <li>SoftConcreteSandResearch</li>

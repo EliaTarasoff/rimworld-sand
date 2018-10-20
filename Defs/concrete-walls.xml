@@ -95,7 +95,7 @@
             <Beauty>-1</Beauty>
             <MaxHitPoints>150</MaxHitPoints>
             <WorkToBuild>2000</WorkToBuild>
-            <Flammability>0.25</Flammability>
+            <Flammability>0.35</Flammability>
         </statBases>
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
         <researchPrerequisites>
