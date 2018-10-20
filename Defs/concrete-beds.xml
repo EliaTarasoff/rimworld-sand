@@ -5,6 +5,8 @@
         <drawGUIOverlay>True</drawGUIOverlay>
         <defaultPlacingRot>South</defaultPlacingRot>
         <altitudeLayer>Building</altitudeLayer>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
 
         <thingClass>Building_Bed</thingClass>
         <designationCategory>Furniture</designationCategory>
@@ -71,8 +73,6 @@
                 <rect>(0,0.05,1,1.95)</rect>
             </damageData>
         </graphicData>
-        <staticSunShadowHeight>0.17</staticSunShadowHeight>
-        <castEdgeShadows>True</castEdgeShadows>
 
         <costList>
             <ConcreteSandForm>3</ConcreteSandForm>
@@ -100,8 +100,6 @@
                 <rect>(0,0.05,2,1.95)</rect>
             </damageData>
         </graphicData>
-        <staticSunShadowHeight>0.17</staticSunShadowHeight>
-        <castEdgeShadows>True</castEdgeShadows>
 
         <costList>
             <ConcreteSandForm>6</ConcreteSandForm>
@@ -134,10 +132,6 @@
             <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
             <SurgerySuccessChanceFactor>0.9</SurgerySuccessChanceFactor>
         </statBases>
-        <researchPrerequisites>
-            <li>ConcreteSandBeddingResearch</li>
-            <li>SoftConcreteSandResearch</li>
-        </researchPrerequisites>
     </ThingDef>
 
     <ThingDef ParentName="SoftConcreteSandBedBase">
@@ -154,8 +148,6 @@
                 <rect>(0,0.05,1,1.95)</rect>
             </damageData>
         </graphicData>
-        <staticSunShadowHeight>0.17</staticSunShadowHeight>
-        <castEdgeShadows>True</castEdgeShadows>
 
         <costList>
             <ConcreteSandForm>4</ConcreteSandForm>
@@ -167,6 +159,10 @@
             <WorkToBuild>1500</WorkToBuild>
         </statBases>
         <size>(1,2)</size>
+        <researchPrerequisites>
+            <li>ConcreteSandBeddingResearch</li>
+            <li>SoftConcreteSandResearch</li>
+        </researchPrerequisites>
     </ThingDef>
 
     <ThingDef ParentName="SoftConcreteSandBedBase">
@@ -183,8 +179,6 @@
                 <rect>(0,0.05,2,1.95)</rect>
             </damageData>
         </graphicData>
-        <staticSunShadowHeight>0.17</staticSunShadowHeight>
-        <castEdgeShadows>True</castEdgeShadows>
 
         <costList>
             <ConcreteSandForm>8</ConcreteSandForm>
@@ -196,5 +190,73 @@
             <WorkToBuild>3000</WorkToBuild>
         </statBases>
         <size>(2,2)</size>
+        <researchPrerequisites>
+            <li>ConcreteSandBeddingResearch</li>
+            <li>SoftConcreteSandResearch</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="SoftConcreteSandBedBase">
+        <defName>TexturedSoftConcreteSandBed</defName>
+        <label>textured soft concrete sand bed</label>
+        <description>A sheet and pillow, on a smooth concrete sand box. This one has been textured with images of flora, fauna, and sights from around the world.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rect>(0,0.05,1,1.95)</rect>
+            </damageData>
+        </graphicData>
+
+        <costList>
+            <ConcreteSandForm>5</ConcreteSandForm>
+            <Cloth>70</Cloth>
+        </costList>
+        <statBases>
+            <Beauty>5</Beauty>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>2500</WorkToBuild>
+        </statBases>
+        <size>(1,2)</size>
+        <researchPrerequisites>
+            <li>ConcreteSandBeddingResearch</li>
+            <li>SoftConcreteSandResearch</li>
+            <li>IntricateConcreteSandResearch</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="SoftConcreteSandBedBase">
+        <defName>TexturedSoftConcreteSandDoubleBed</defName>
+        <label>textured soft concrete sand double bed</label>
+        <description>A sheet and pillows, on a smooth concrete sand box, for two people. This one has been textured with images of flora, fauna, and sights from around the world.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/DoubleBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.05,2.05)</drawSize>
+            <damageData>
+                <rect>(0,0.05,2,1.95)</rect>
+            </damageData>
+        </graphicData>
+
+        <costList>
+            <ConcreteSandForm>10</ConcreteSandForm>
+            <Cloth>140</Cloth>
+        </costList>
+        <statBases>
+            <Beauty>10</Beauty>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>5000</WorkToBuild>
+        </statBases>
+        <size>(2,2)</size>
+        <researchPrerequisites>
+            <li>ConcreteSandBeddingResearch</li>
+            <li>SoftConcreteSandResearch</li>
+            <li>IntricateConcreteSandResearch</li>
+        </researchPrerequisites>
     </ThingDef>
 </Defs>

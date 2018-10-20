@@ -23,9 +23,6 @@
 
         <thingClass>Building</thingClass>
         <category>Building</category>
-        <costList>
-            <ConcreteSandForm>2</ConcreteSandForm>
-        </costList>
         <altitudeLayer>Building</altitudeLayer>
         <passability>Impassable</passability>
         <blockWind>true</blockWind>
@@ -60,7 +57,7 @@
     <ThingDef ParentName="ConcreteSandWallBase">
         <defName>ConcreteSandWall</defName>
         <label>concrete sand wall</label>
-        <description>A wall made of concrete sand. Ugly, but made from readily available materials.</description>
+        <description>A wall made of concrete sand. Very ugly, but made from readily available materials.</description>
 
         <graphicData>
             <graphicClass>Graphic_Appearances</graphicClass>
@@ -68,9 +65,12 @@
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
 
+        <costList>
+            <ConcreteSandForm>2</ConcreteSandForm>
+        </costList>
         <statBases>
             <Beauty>-2</Beauty>
-            <MaxHitPoints>200</MaxHitPoints>
+            <MaxHitPoints>300</MaxHitPoints>
             <WorkToBuild>1500</WorkToBuild>
             <Flammability>0.25</Flammability>
         </statBases>
@@ -83,7 +83,7 @@
     <ThingDef ParentName="ConcreteSandWallBase">
         <defName>SoftConcreteSandWall</defName>
         <label>soft concrete sand wall</label>
-        <description>A wall made of soft concrete sand. Less ugly, than one made from coarse sand.</description>
+        <description>A wall made of soft concrete sand. Less ugly than one made from coarse sand.</description>
 
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
@@ -91,9 +91,12 @@
         </graphicData>
         <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
 
+        <costList>
+            <ConcreteSandForm>2</ConcreteSandForm>
+        </costList>
         <statBases>
             <Beauty>-1</Beauty>
-            <MaxHitPoints>150</MaxHitPoints>
+            <MaxHitPoints>250</MaxHitPoints>
             <WorkToBuild>2000</WorkToBuild>
             <Flammability>0.35</Flammability>
         </statBases>
@@ -101,6 +104,34 @@
         <researchPrerequisites>
             <li>ConcreteSandWallResearch</li>
             <li>SoftConcreteSandResearch</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="ConcreteSandWallBase">
+        <defName>TexturedSoftConcreteSandWall</defName>
+        <label>textured soft concrete sand wall</label>
+        <description>A wall made of soft concrete sand, textured to look like bricks. Neutral in terms of looks, but very slow to produce.</description>
+
+        <graphicData>
+            <graphicClass>Graphic_Appearances</graphicClass>
+            <texPath>Things/Building/Linked/Wall</texPath>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+
+        <costList>
+            <ConcreteSandForm>3</ConcreteSandForm>
+        </costList>
+        <statBases>
+            <Beauty>0</Beauty>
+            <MaxHitPoints>250</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <Flammability>0.35</Flammability>
+        </statBases>
+        <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
+        <researchPrerequisites>
+            <li>ConcreteSandWallResearch</li>
+            <li>SoftConcreteSandResearch</li>
+            <li>IntricateConcreteSandResearch</li>
         </researchPrerequisites>
     </ThingDef>
 </Defs>

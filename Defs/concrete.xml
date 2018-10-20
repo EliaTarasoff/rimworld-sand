@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <TerrainDef Name="ConcreteSandBase" Abstract="True">
+        <color>(255, 240, 200)</color>
+        <edgeType>Hard</edgeType>
+        <renderPrecedence>200</renderPrecedence>
+
+        <layerable>true</layerable>
+        <designationCategory>Floors</designationCategory>
+        <fertility>0</fertility>
+        <constructEffect>ConstructDirt</constructEffect>
+        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+    </TerrainDef>
+
+
     <TerrainAffordanceDef>
         <defName>AffordanceConcreteSand</defName>
         <label>diggable sand</label>
         <order>4000</order>
     </TerrainAffordanceDef>
 
-    <TerrainDef>
+    <TerrainDef ParentName="ConcreteSandBase">
         <defName>ConcreteSand</defName>
         <label>concrete sand</label>
-        <description>Polymerized concrete made from sand. It locks the sand in place, to keep it from dirtying other surfaces, but is ugly, slow to produce, and can't support much weight.</description>
+        <description>Polymerized concrete made from sand. It locks the sand in place, to keep it from dirtying other surfaces and provides a smooth walking surface. It is very ugly and slow to produce.</description>
 
         <texturePath>Terrain/Surfaces/Concrete</texturePath>
-        <color>(255, 240, 200)</color>
-        <edgeType>Hard</edgeType>
-        <renderPrecedence>200</renderPrecedence>
 
         <terrainAffordanceNeeded>AffordanceConcreteSand</terrainAffordanceNeeded>
         <affordances>
             <li>Light</li>
             <li>Medium</li>
         </affordances>
-        <layerable>true</layerable>
-        <designationCategory>Floors</designationCategory>
-        <fertility>0</fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+
         <costList>
             <ConcreteSandForm>1</ConcreteSandForm>
         </costList>
@@ -46,25 +52,17 @@
         <order>4100</order>
     </TerrainAffordanceDef>
 
-    <TerrainDef>
+    <TerrainDef ParentName="ConcreteSandBase">
         <defName>SoftConcreteSand</defName>
         <label>soft concrete sand</label>
-        <description>Floor tiles made by polymerizing soft sand. Slow to produce, and can't support much weight. Less ugly than one made from coarse sand.</description>
+        <description>Floor tiles made by polymerizing soft sand. Slow to produce, but less ugly than floors made from coarse sand.</description>
 
         <texturePath>Terrain/Surfaces/PavedTile</texturePath>
-        <color>(255, 240, 200)</color>
-        <edgeType>Hard</edgeType>
-        <renderPrecedence>200</renderPrecedence>
 
         <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
         <affordances>
             <li>Light</li>
         </affordances>
-        <layerable>true</layerable>
-        <designationCategory>Floors</designationCategory>
-        <fertility>0</fertility>
-        <constructEffect>ConstructDirt</constructEffect>
-        <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
         <costList>
             <ConcreteSandForm>1</ConcreteSandForm>
         </costList>
@@ -75,6 +73,31 @@
         </statBases>
         <researchPrerequisites>
             <li>SoftConcreteSandResearch</li>
+        </researchPrerequisites>
+    </TerrainDef>
+
+    <TerrainDef ParentName="ConcreteSandBase">
+        <defName>TexturedSoftConcreteSand</defName>
+        <label>textured soft concrete sand</label>
+        <description>Floor tiles made by polymerizing soft sand, textured to look like bricks. Neutral in looks, but very slow to produce.</description>
+
+        <texturePath>Terrain/Surfaces/TileStone</texturePath>
+
+        <terrainAffordanceNeeded>AffordanceSoftConcreteSand</terrainAffordanceNeeded>
+        <affordances>
+            <li>Light</li>
+        </affordances>
+        <costList>
+            <ConcreteSandForm>2</ConcreteSandForm>
+        </costList>
+        <statBases>
+            <Beauty>0</Beauty>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <researchPrerequisites>
+            <li>SoftConcreteSandResearch</li>
+            <li>IntricateConcreteSandResearch</li>
         </researchPrerequisites>
     </TerrainDef>
 </Defs>

@@ -52,7 +52,7 @@
     <ResearchProjectDef>
         <defName>ConcreteSandResearch</defName>
         <label>concrete sand</label>
-        <description>Polymerize sand into a form of concrete, to lock the sand in place and keep it from dirtying other surfaces.</description>
+        <description>Polymerize sand into a form of concrete, to lock the sand in place, keep it from dirtying other surfaces, and provide a smooth walking surface.</description>
         <researchViewX>0</researchViewX>
         <researchViewY>2</researchViewY>
 
