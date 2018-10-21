@@ -76,7 +76,7 @@
 
         <costList>
             <ConcreteSandForm>3</ConcreteSandForm>
-            <Cloth>50</Cloth>
+            <Cloth>20</Cloth>
         </costList>
         <statBases>
             <Beauty>-5</Beauty>
@@ -103,7 +103,7 @@
 
         <costList>
             <ConcreteSandForm>6</ConcreteSandForm>
-            <Cloth>100</Cloth>
+            <Cloth>40</Cloth>
         </costList>
         <statBases>
             <Beauty>-10</Beauty>
@@ -151,7 +151,7 @@
 
         <costList>
             <ConcreteSandForm>4</ConcreteSandForm>
-            <Cloth>70</Cloth>
+            <Cloth>30</Cloth>
         </costList>
         <statBases>
             <Beauty>-2</Beauty>
@@ -182,7 +182,7 @@
 
         <costList>
             <ConcreteSandForm>8</ConcreteSandForm>
-            <Cloth>140</Cloth>
+            <Cloth>60</Cloth>
         </costList>
         <statBases>
             <Beauty>-4</Beauty>
@@ -213,7 +213,7 @@
 
         <costList>
             <ConcreteSandForm>5</ConcreteSandForm>
-            <Cloth>70</Cloth>
+            <Cloth>30</Cloth>
         </costList>
         <statBases>
             <Beauty>5</Beauty>
@@ -245,7 +245,7 @@
 
         <costList>
             <ConcreteSandForm>10</ConcreteSandForm>
-            <Cloth>140</Cloth>
+            <Cloth>60</Cloth>
         </costList>
         <statBases>
             <Beauty>10</Beauty>
