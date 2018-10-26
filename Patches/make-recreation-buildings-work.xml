@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+In addition to giving each building a <joyKind> such as "Gaming_Dexterity", you need to list them under each
+specific activity. (Probably so the game knows what animations to play, like when playing billiards.)
+-->
+
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/JoyGiverDef[defName="Play_Chess"]/thingDefs</xpath>
+        <value>
+            <li>SandChessTable</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/JoyGiverDef[defName="Play_Poker"]/thingDefs</xpath>
+        <value>
+            <li>SandCardsTable</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/JoyGiverDef[defName="Play_Billiards"]/thingDefs</xpath>
+        <value>
+            <li>SandBilliardsTable</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/JoyGiverDef[defName="WatchTelevision"]/thingDefs</xpath>
+        <value>
+            <li>SandTubeTelevision</li>
+        </value>
+    </Operation>
+</Patch>
