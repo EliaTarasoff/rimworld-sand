@@ -59,8 +59,7 @@
             <ConcreteSandForm>25</ConcreteSandForm>
         </products>
         <workAmount>1000</workAmount>
-
-        <!-- I dislike putting the buildings on the recipe, but otherwise I'd need to make a patch anyways, so... -->
+        <researchPrerequisite>ConcreteSandResearch</researchPrerequisite>
         <recipeUsers>
             <li>ElectricTailoringBench</li>
             <li>HandTailoringBench</li>
