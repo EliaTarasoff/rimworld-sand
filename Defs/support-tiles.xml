@@ -174,7 +174,7 @@
 
     <TerrainDef ParentName="StoneSandSupportTileBase">
         <defName>LimestoneSandSupportTile</defName>
-        <label>sand support tile (sandstone tile-surfaced)</label>
+        <label>sand support tile (limestone tile-surfaced)</label>
         <color>(158, 153, 135)</color>
 
         <costList>
